@@ -1,0 +1,143 @@
+
+
+
+
+<head>
+
+    <title> Book Cruise</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="/assets/css/font_style.css" rel="stylesheet" />
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <link href="/assets/css/footer.css" rel="stylesheet" />
+    <link href="/assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="/assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/css/main.css" rel="stylesheet" />
+     <link href="/assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="/assets/css/Animated.css" rel="stylesheet" />
+    <link href="/assets/css/all.css" rel="stylesheet" />
+    <script src="/assets/JS/modernizr-2.6.2.min.js"></script>
+    <link href="/assets/css/all.min.css" rel="stylesheet" />
+    <script src="/assets/JS/toggle.js"></script>
+    <link href="/assets/css/style.css" rel="stylesheet" />
+    </head>
+    <link href="/assets/css/navbar.css" rel="stylesheet" />
+
+
+<div id="booking" class="section" style="background-image:url(/assets/Images/background.jpg)">
+  <div class="section-center">
+    <% include divs/navbar %>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 col-md-push-5">
+          <div class="booking-cta">
+            <h1>Book your Cruise</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi facere, soluta magnam consectetur molestias itaque
+              ad sint fugit architecto incidunt iste culpa perspiciatis possimus voluptates aliquid consequuntur cumque quasi.
+              Perspiciatis.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 col-md-pull-7">
+          <div class="booking-form">
+            <form>
+              <div class="form-group">
+                <span class="form-label">From</span>
+                <!--<input class="form-control" type="text" placeholder="Enter a destination or hotel name">-->
+                                      <select class="form-control" id="src" >
+                      <option>select source</option>
+
+                                                 <option value="256">Alaska</option><option value="257">Bahamas</option><option value="908">Bermuda</option><option value="909">Canada / New England</option><option value="258">Caribbean</option><option value="918">Europe</option><option value="262">Hawaii</option><option value="568540">Mediterranean</option><option value="261">Mexico</option><option value="932">Panama Canal</option>      <option disabled="">-----</option>
+    <option value="900">Africa</option><option value="256">Alaska</option><option value="902">Antarctica</option><option value="903">Arabian Gulf</option><option value="258652">Arctic</option><option value="568542">Asia</option><option value="904">Atlantic</option><option value="905">Australasia</option><option value="906">Australia / New Zealand</option><option value="257">Bahamas</option><option value="907">Baja Mexico</option><option value="908">Bermuda</option><option value="909">Canada / New England</option><option value="258653">Canary Islands</option><option value="258">Caribbean</option><option value="914">Central Mediterranean</option><option value="607348">Cuba</option><option value="910">Eastern Caribbean</option><option value="916">Eastern Europe</option><option value="917">Eastern Mediterranean</option><option value="918">Europe</option><option value="919">Galapagos</option><option value="262">Hawaii</option><option value="787053">India</option><option value="921">Indian Ocean</option><option value="922">Island Highlights</option><option value="568540">Mediterranean</option><option value="923">Mexican Riviera</option><option value="261">Mexico</option><option value="924">Middle East</option><option value="568489">N/A</option><option value="926">North America</option><option value="928">Northern Europe</option><option value="929">Orient Far East</option><option value="930">Pacific</option><option value="931">Pacific Coastal</option><option value="932">Panama Canal</option><option value="933">Positioning Indian Ocean</option><option value="934">Red Sea</option><option value="935">Repositioning</option><option value="936">South America</option><option value="911">Southern Caribbean</option><option value="938">Southern Europe</option><option value="937">South Pacific</option><option value="940">Transatlantic</option><option value="912">Western Caribbean</option><option value="941">Western Europe</option><option value="942">Western Mediterranean</option><option value="943">World Cruise</option>    </select>
+
+                                                  </select>
+                    <span class="select-arrow"></span>
+
+              </div>
+                                <div class="form-group">
+                <span class="form-label">To (Your Destination)</span>
+                <!--<input class="form-control" type="text" placeholder="Enter a destination or hotel name">-->
+                                      <select class="form-control" id="dest">
+                      <option>select Destination</option>
+                      <option value="256">Alaska</option><option value="257">Bahamas</option><option value="908">Bermuda</option><option value="909">Canada / New England</option><option value="258">Caribbean</option><option value="918">Europe</option><option value="262">Hawaii</option><option value="568540">Mediterranean</option><option value="261">Mexico</option><option value="932">Panama Canal</option>      <option disabled="">-----</option>
+    <option value="900">Africa</option><option value="256">Alaska</option><option value="902">Antarctica</option><option value="903">Arabian Gulf</option><option value="258652">Arctic</option><option value="568542">Asia</option><option value="904">Atlantic</option><option value="905">Australasia</option><option value="906">Australia / New Zealand</option><option value="257">Bahamas</option><option value="907">Baja Mexico</option><option value="908">Bermuda</option><option value="909">Canada / New England</option><option value="258653">Canary Islands</option><option value="258">Caribbean</option><option value="914">Central Mediterranean</option><option value="607348">Cuba</option><option value="910">Eastern Caribbean</option><option value="916">Eastern Europe</option><option value="917">Eastern Mediterranean</option><option value="918">Europe</option><option value="919">Galapagos</option><option value="262">Hawaii</option><option value="787053">India</option><option value="921">Indian Ocean</option><option value="922">Island Highlights</option><option value="568540">Mediterranean</option><option value="923">Mexican Riviera</option><option value="261">Mexico</option><option value="924">Middle East</option><option value="568489">N/A</option><option value="926">North America</option><option value="928">Northern Europe</option><option value="929">Orient Far East</option><option value="930">Pacific</option><option value="931">Pacific Coastal</option><option value="932">Panama Canal</option><option value="933">Positioning Indian Ocean</option><option value="934">Red Sea</option><option value="935">Repositioning</option><option value="936">South America</option><option value="911">Southern Caribbean</option><option value="938">Southern Europe</option><option value="937">South Pacific</option><option value="940">Transatlantic</option><option value="912">Western Caribbean</option><option value="941">Western Europe</option><option value="942">Western Mediterranean</option><option value="943">World Cruise</option>    </select>
+
+                                             </select>
+                    <span class="select-arrow"></span>
+
+              </div>
+
+                  <div class="form-group">
+                    <span class="form-label">Choose Date</span>
+                    <input class="form-control" type="date" id="Cdate" required>
+                  </div>
+              <div class="row">
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <span class="form-label">Adults</span>
+                    <select class="form-control" id="adult">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
+                    <span class="select-arrow"></span>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <span class="form-label">Children</span>
+                    <select class="form-control" id="child">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
+                    <span class="select-arrow"></span>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <span class="form-label">Infants</span>
+                    <select class="form-control" id="infants">
+                      <option>0</option>
+                      <option>1</option>
+                      <option>2</option>
+                    </select>
+                    <span class="select-arrow"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-btn">
+                <!--<button class="submit-btn" onclick="validate()" >Proceed to Book</button>-->
+                                  <a href="BookingDetails.html" class="submit-btn" onclick="validate()">Proceed to Book</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <div class="container">
+
+      <div class="booking-form col-lg-5 col-sm-offset-1 cruiseblock">
+          <img  src="/assets/Images/d3.jpg" />
+
+         </div>
+
+           <div class="booking-form col-lg-5 col-sm-offset-1 cruiseblock">
+               <img src="/assets/Images/d2.jpg" />
+           </div>
+      <div class="booking-form col-lg-5 col-sm-offset-1 cruiseblock">
+          <img src="/assets/Images/d3.jpg" />
+          </div>
+ <div class="booking-form col-lg-5 col-sm-offset-1 cruiseblock">
+          <img src="/assets/Images/d3.jpg" />
+
+         </div>
+
+  </div>

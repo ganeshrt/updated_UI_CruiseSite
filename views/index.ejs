@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="/assets/css/font_style.css" rel="stylesheet" />
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <link href="/assets/css/footer.css" rel="stylesheet" />
+    <link href="/assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="/assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/css/main.css" rel="stylesheet" />
+     <link href="/assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="/assets/css/Animated.css" rel="stylesheet" />
+    <link href="/assets/css/all.css" rel="stylesheet" />
+    <script src="/assets/JS/modernizr-2.6.2.min.js"></script>
+    <link href="/assets/css/all.min.css" rel="stylesheet" />
+    <script src="/assets/JS/toggle.js"></script>
+    <link href="/assets/css/style.css" rel="stylesheet" />
+    <link href="/assets/css/navbar.css" rel="stylesheet" />
+  <style>
+      .cover {
+          background: linear-gradient(rgba(0,0,0,0.1) 50%,rgba(0,0,0,0.1)), url(/assets/Images/344294.jpg) center;
+          background-size: cover;
+          min-height: 50rem;
+          height: 750px;
+          border-radius: 0;
+          width: 100%;
+          color: #fff;
+          padding-top: 1rem;
+      }
+
+      .fa-credit-card:before {
+          content: "\f09d";
+      }
+
+      .cover h1 {
+          font-weight: 200;
+      }
+
+      .cover p.lead {
+          margin: 2rem auto;
+          color: rgba(255, 255, 255, 0.75);
+      }
+
+      .cover .cover-container {
+          display: table;
+          height: 100%;
+          min-height: 44rem;
+          margin: 0 auto;
+      }
+
+      .atag:hover {
+          border: double 1px;
+          border-radius: 4px;
+          color: #777;
+      }
+
+      .atag {
+          font-size: 20px;
+          text-align: center;
+          color: black;
+          padding-left: 3px;
+      }
+
+      .trans {
+          /*background: rgba(51, 52, 55, 0.86);*/
+          background:#e1dddd;
+          color:rgb(39, 50, 56);
+          border:thick black;
+          border-color:black;
+      }
+
+
+      .collapsible {
+          background-color: #777;
+          color: white;
+          cursor: pointer;
+          padding: 18px;
+          width: 100%;
+          border: none;
+          text-align: left;
+          outline: none;
+          font-size: 15px;
+      }
+
+          .active, .collapsible:hover {
+              background-color: #555;
+          }
+
+      .content {
+          padding: 0 18px;
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.2s ease-out;
+          background-color: #f1f1f1;
+      }
+
+      .footer {
+          background: rgb(39, 50, 56);
+      }
+
+      .mybtn {
+          background: #3085b8;
+          color: white;
+      }
+
+          .mybtn:hover {
+              background: #0f5a9e;
+              color: white;
+          }
+
+
+
+      .navbar.solid {
+          background-color: #490D40;
+          transition: background-color 1s ease 0s;
+          box-shadow: 0 0 4px grey;
+          color: #C57ED3;
+          transition: color 1s ease 0s;
+      }
+
+      .navbar-inverse {
+          color: #C57ED3;
+          transition: color 1s ease 0s;
+      }
+
+      .mynav {
+          background: white
+          /*rgba(113, 111, 111, 0.54);*/
+          ;
+          border: none;
+          box-shadow: #fff 10px 10px inset;
+          height: 80px;
+          position: fixed;
+          width: 100%;
+          opacity: 1;
+          z-index: 1;
+          top: 0;
+          left: 0;
+      }
+      body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #595959;
+    background: #fff; }
+
+      .mybox {
+          border-radius: 150px; text-align: center; height: 300px; background: #eeeeee; box-shadow: 0px 0px 60px 10px rgba(0,0,0,0.3);
+      }
+
+
+
+    </style>
+    <script>
+        window.onscroll = function () { myFunction() };
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+
+    </script>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+
+
+
+
+    </script>
+
+    <script type="text/javascript">
+        function validate() {
+            var dest_result = document.getElementById('destination_result');
+
+            var departure = document.getElementById('departure_result');
+            var months = document.getElementById('result4');
+            var length = document.getElementById('result3');
+            var cruiseLine = document.getElementById('result1');
+            var infants = document.getElementById('infant');
+            var total = parseInt(adults.value) + parseInt(childs.value);
+            sessionStorage.setItem("totalNum", total);
+            var temp = sessionStorage.setItem("source", src.value);
+
+            sessionStorage.setItem("destination", dest.value);
+
+            sessionStorage.setItem("currentDate", cdate.value);
+            sessionStorage.setItem("Adults", adults.value);
+            sessionStorage.setItem("Childs", childs.value);
+            sessionStorage.setItem("Infants", infants.value);
+
+
+
+        }
+	</script>
+</head>
+<body Style="background:#f3f2f2;">
+
+    <section class="cover text-center">
+        <div class="col-lg-12">
+
+          <% include divs/navbar %>
+
+
+        </div>
+
+
+        <div class="cover-container pb-4 " style="padding-top: 50px;">
+            <div class="cover-inner container">
+            </div>
+
+            <div class="col-lg-3 curise_left_bar">
+                <div class="container-fluid center" style="background:rgba(251, 249, 249, 0.79); height: 500px; width: 400px; border-radius: 20px;color:black; ">
+                    <center>
+                        <h2>Find Your Route</h2>
+              <form class="horizontal cover-container" style="padding-top:30px;">
+  <input type="hidden" id="parentDestination" value="">
+  <input type="hidden" value="All Departure Ports">
+  <input type="hidden" value="All Cruise Ships">
+  <div class="form-group">
+    <!--<label class="frm_capital_latter">DESTINATION:</label>-->
+    <select id="destination_result" class="form-control trans" onchange="get_view_data(this.value, 'home');">
+      <option value="All Destination">Select Destination</option>
+      <option value="256">Alaska</option><option value="257">Bahamas</option><option value="908">Bermuda</option><option value="909">Canada / New England</option><option value="258">Caribbean</option><option value="918">Europe</option><option value="262">Hawaii</option><option value="568540">Mediterranean</option><option value="261">Mexico</option><option value="932">Panama Canal</option>      <option disabled="">-----</option>
+      <option value="900">Africa</option><option value="256">Alaska</option><option value="902">Antarctica</option><option value="903">Arabian Gulf</option><option value="258652">Arctic</option><option value="568542">Asia</option><option value="904">Atlantic</option><option value="905">Australasia</option><option value="906">Australia / New Zealand</option><option value="257">Bahamas</option><option value="907">Baja Mexico</option><option value="908">Bermuda</option><option value="909">Canada / New England</option><option value="258653">Canary Islands</option><option value="258">Caribbean</option><option value="914">Central Mediterranean</option><option value="607348">Cuba</option><option value="910">Eastern Caribbean</option><option value="916">Eastern Europe</option><option value="917">Eastern Mediterranean</option><option value="918">Europe</option><option value="919">Galapagos</option><option value="262">Hawaii</option><option value="787053">India</option><option value="921">Indian Ocean</option><option value="922">Island Highlights</option><option value="568540">Mediterranean</option><option value="923">Mexican Riviera</option><option value="261">Mexico</option><option value="924">Middle East</option><option value="568489">N/A</option><option value="926">North America</option><option value="928">Northern Europe</option><option value="929">Orient Far East</option><option value="930">Pacific</option><option value="931">Pacific Coastal</option><option value="932">Panama Canal</option><option value="933">Positioning Indian Ocean</option><option value="934">Red Sea</option><option value="935">Repositioning</option><option value="936">South America</option><option value="911">Southern Caribbean</option><option value="938">Southern Europe</option><option value="937">South Pacific</option><option value="940">Transatlantic</option><option value="912">Western Caribbean</option><option value="941">Western Europe</option><option value="942">Western Mediterranean</option><option value="943">World Cruise</option>    </select>
+  </div>
+  <div class="form-group">
+    <!--<label class="frm_capital_latter">DEPARTURE PORT:</label>-->
+    <select id="departure_result" class="form-control trans" onchange="get_view_data(this.value, 'home');">
+      <option value="All Departure">Select Departure Port</option>
+      <option value="505514">Barcelona</option><option value="794">Fort Lauderdale</option><option value="798">Galveston</option><option value="505528">Los Angeles</option><option value="819">Miami</option><option value="825">New Orleans</option><option value="826">New York City</option><option value="837">Port Canaveral</option><option value="505518">Rome</option><option value="707">San Juan</option><option value="845">Seattle</option><option value="507">Southampton</option><option value="853">Tampa</option><option value="355">Vancouver</option><option value="505520">Venice</option>      <option disabled="">-----</option>
+      <option value="266">Abu Dhabi</option><option value="512">Accra</option><option value="280">Adelaide</option><option value="656">Amsterdam</option><option value="774">Anchorage</option><option value="562">Ancona</option><option value="310">Antwerp</option><option value="890567">Apra</option><option value="590">Aqaba</option><option value="630861">Araura</option><option value="468">Arles</option><option value="537">Atambua</option><option value="524">Athens</option><option value="670">Auckland</option><option value="469">Avignon</option><option value="369">Bali</option><option value="540">Bali Denpasar</option><option value="777">Baltimore</option><option value="518">Baltra (Galapagos)</option><option value="749">Bangkok</option><option value="371">Baoshan</option><option value="309">Barbados</option><option value="505514">Barcelona</option><option value="563">Bari</option><option value="505511">Basel</option><option value="780">Battle Mountain</option><option value="622645">Bayonne</option><option value="505513">Beijing</option><option value="372">Beijing</option><option value="659">Bergen</option><option value="392">Berlin</option><option value="317">Bermuda</option><option value="443">Bilbao</option><option value="470">Bordeaux</option><option value="783">Boston</option><option value="564">Brindisi</option><option value="283">Brisbane</option><option value="284">Broome</option><option value="716">Bucharest</option><option value="536">Budapest</option><option value="505505">Buenos Aires</option><option value="274">Buenos Aires-ezeiza</option><option value="565">Cagliari</option><option value="285">Cairns</option><option value="427">Cairo</option><option value="723290">Calgary</option><option value="872796">Callao</option><option value="472">Cannes</option><option value="878">Cape Town</option><option value="417">Casa De Campo</option><option value="567">Catania</option><option value="788">Charleston</option><option value="554">Chennai/madras</option><option value="474">Cherbourg</option><option value="673">Christchurch</option><option value="344">Churchill</option><option value="568">Civitavecchia (Rome)</option><option value="620">Colombo</option><option value="684">Colon</option><option value="416">Copenhagen</option><option value="270">Curacao</option><option value="288">Darwin</option><option value="494">Dover</option><option value="267">Dubai</option><option value="550">Dublin</option><option value="534">Dubrovnik</option><option value="674">Dunedin</option><option value="879">Durban</option><option value="364">Easter Island</option><option value="495">Edinburgh</option><option value="892246">Eilat</option><option value="893076">Engelhartszell</option><option value="785957">Fairbanks</option><option value="633">Fort-de-France</option><option value="794">Fort Lauderdale</option><option value="396">Frankfurt</option><option value="289">Fremantle</option><option value="592">Fukuoka</option><option value="708">Funchal</option><option value="798">Galveston</option><option value="569">Genoa</option><option value="719">Giurgiu</option><option value="630860">Gorom Gorom</option><option value="498">Greenwich</option><option value="863530">Guam</option><option value="420">Guayaquil</option><option value="551">Haifa</option><option value="398">Hamburg</option><option value="871">Hanoi</option><option value="461">Helsinki</option><option value="290">Hobart</option><option value="872">Ho Chi Minh City</option><option value="533">Hong Kong</option><option value="800">Honolulu</option><option value="801">Honolulu Oahu</option><option value="657">Ijmuiden</option><option value="609780">IndiaNew</option><option value="761">Istanbul</option><option value="505526">Jacksonville</option><option value="865466">Jakarta</option><option value="880">Johannesburg</option><option value="608">Kampong Cham</option><option value="513">Kangerlussuaq</option><option value="888716">Keelung</option><option value="399">Kiel</option><option value="772">Kiev</option><option value="594">Kobe</option><option value="532300">Kompong Thom</option><option value="863531">Laem Chabang</option><option value="628062">Lake Charles</option><option value="831106">Larnaca</option><option value="477">Le Havre</option><option value="690">Lima</option><option value="389">Limassol</option><option value="710">Lisbon</option><option value="572">Livorno</option><option value="505516">London</option><option value="664">Longyearbyen</option><option value="505528">Los Angeles</option><option value="623">Luxembourg</option><option value="479">Lyon</option><option value="450">Madrid</option><option value="737">Mahe Island</option><option value="796538">Mainz</option><option value="451">Malaga</option><option value="638">Male</option><option value="635">Malta</option><option value="328">Manaus</option><option value="702">Manila</option><option value="795736">Maputo</option><option value="480">Marseille</option><option value="505506">Melbourne</option><option value="573">Messina</option><option value="819">Miami</option><option value="821">Mobile</option><option value="604">Mombasa</option><option value="627">Monte Carlo</option><option value="381">Monteria</option><option value="859">Montevideo</option><option value="505510">Montreal</option><option value="348">Montreal Dorval</option><option value="727">Moscow</option><option value="556">Mumbai</option><option value="404">Munich</option><option value="682">Muscat</option><option value="463">Nadi</option><option value="693735">Nagoya</option><option value="575">Naples</option><option value="827">Newark</option><option value="505508">Newcastle</option><option value="825">New Orleans</option><option value="826">New York City</option><option value="481">Nice</option><option value="829">Nome</option><option value="505530">Norfolk</option><option value="845631">Norfolk. Island</option><option value="532295">Nullarbor</option><option value="405">Nuremberg</option><option value="773">Odessa</option><option value="599">Osaka</option><option value="666">Oslo</option><option value="600">Otaru</option><option value="520">P. Baquerizo (san Cristobal)</option><option value="577">Palermo</option><option value="452">Palma De Mallorca</option><option value="686">Panama City</option><option value="693">Papeete</option><option value="482">Paris</option><option value="406">Passau</option><option value="298">Perth</option><option value="752">Phuket</option><option value="515">Pointe A Pitre</option><option value="837">Port Canaveral</option><option value="838">Portland</option><option value="637">Port Louis</option><option value="712">Porto</option><option value="390">Prague</option><option value="609951">Prek Kdam</option><option value="387">Puerta Caldera</option><option value="889620">Puerto Quetzal</option><option value="643">Puerto Vallarta</option><option value="366">Punta Arenas</option><option value="614">Pusan</option><option value="352">Quebec</option><option value="632">Rangoon</option><option value="333">Recife</option><option value="408">Regensburg</option><option value="319">Reyes</option><option value="561">Reykjavik</option><option value="505509">Rio De Janeiro</option><option value="505518">Rome</option><option value="658">Rotterdam</option><option value="847037">Sacramento</option><option value="434">Safaga</option><option value="335">Salvador</option><option value="818716">San Antonio</option><option value="841">San Diego</option><option value="505532">San Francisco</option><option value="707">San Juan</option><option value="792314">San Marino</option><option value="843">Santa Fe</option><option value="367">Santiago</option><option value="337">Santos</option><option value="582">Savona</option><option value="795531">Schenectady</option><option value="845">Seattle/Tacoma</option><option value="846">Seward</option><option value="375">Shanghai</option><option value="785956">Shannon</option><option value="505524">Singapore</option><option value="436">Siwa</option><option value="507">Southampton</option><option value="505523">St. Petersburg</option><option value="714">St Denis Reunion</option><option value="619">St Lucia (castries)</option><option value="271">St Marteen</option><option value="516">St Martin</option><option value="740">Stockholm</option><option value="302">Sydney</option><option value="769">Taipei</option><option value="853">Tampa/St.Petersburg</option><option value="612726">Tarragona</option><option value="505521">Tokyo</option><option value="602">Tokyo-narita</option><option value="701">Torokina</option><option value="785954">Toronto Pearson</option><option value="488">Toulon</option><option value="854">Tri-city Airport</option><option value="586">Trieste</option><option value="668">Tromso</option><option value="277">Ushuaia</option><option value="458">Valencia</option><option value="368">Valparaiso</option><option value="355">Vancouver</option><option value="852390">Vega de Terron</option><option value="505520">Venice</option><option value="279">Vienna</option><option value="625">Villa Cisneros</option><option value="413">Vilshofen</option><option value="547">Waris</option><option value="414">Warnemuende</option><option value="856">Washington D.C.</option><option value="857">Whittier</option><option value="603">Yokohama</option><option value="614939">Zanzibar</option><option value="362">Zurich</option>    </select>
+  </div>
+  <div class="form-group">
+    <!--<label class="frm_capital_latter">DEPARTURE MONTH:</label>-->
+    <select id="result4" class="form-control trans" onchange="get_view_data(this.value, 'home');">
+      <option value="All Months">Select Month</option>
+      <option value="October 2018">October 2018</option><option value="November 2018">November 2018</option><option value="December 2018">December 2018</option><option value="January 2019">January 2019</option><option value="February 2019">February 2019</option><option value="March 2019">March 2019</option><option value="April 2019">April 2019</option><option value="May 2019">May 2019</option><option value="June 2019">June 2019</option><option value="July 2019">July 2019</option><option value="August 2019">August 2019</option><option value="September 2019">September 2019</option><option value="October 2019">October 2019</option><option value="November 2019">November 2019</option><option value="December 2019">December 2019</option><option value="January 2020">January 2020</option><option value="February 2020">February 2020</option><option value="March 2020">March 2020</option><option value="April 2020">April 2020</option><option value="May 2020">May 2020</option><option value="June 2020">June 2020</option><option value="July 2020">July 2020</option><option value="August 2020">August 2020</option><option value="September 2020">September 2020</option><option value="October 2020">October 2020</option><option value="November 2020">November 2020</option><option value="December 2020">December 2020</option><option value="January 2021">January 2021</option><option value="February 2021">February 2021</option><option value="March 2021">March 2021</option><option value="April 2021">April 2021</option><option value="May 2021">May 2021</option><option value="June 2021">June 2021</option><option value="July 2021">July 2021</option><option value="August 2021">August 2021</option><option value="September 2021">September 2021</option><option value="October 2021">October 2021</option><option value="November 2021">November 2021</option><option value="December 2021">December 2021</option><option value="January 2022">January 2022</option><option value="February 2022">February 2022</option><option value="March 2022">March 2022</option><option value="April 2022">April 2022</option>    </select>
+  </div>
+  <div class="form-group">
+    <!-- <label class="frm_capital_latter">CRUISE LENGTH:</label>-->
+    <select id="result3" class="form-control trans" onchange="get_view_data(this.value, 'home');">
+      <option value="All Length">Select Length</option>
+      <option value="2">3-5 nights</option><option value="3">6-9 nights</option><option value="4">10-14 nights</option><option value="5">15+ nights</option>    </select>
+  </div>
+  <div class="form-group">
+    <!--<label class="frm_capital_latter">CRUISE LINE:</label>-->
+    <select id="result1" class="form-control trans" onchange="get_view_data(this.value, 'home');">
+      <option value="All Cruise Lines">All Cruise Lines</option>
+      <option value="785436">AmaWaterways</option><option value="10">Azamara Club Cruises</option><option value="11">Carnival Cruise Line</option><option value="15">Celebrity Cruises</option><option value="16">Costa</option><option value="608549">Crystal Cruises</option><option value="856965">Crystal River Cruises</option><option value="17">Cunard Line</option><option value="19">Disney Cruise Line</option><option value="20">Holland America Line</option><option value="21">MSC Cruises</option><option value="22">Norwegian Cruise Line</option><option value="23">Oceania Cruises</option><option value="24">Princess Cruises</option><option value="599619">Regent Seven Seas Cruises</option><option value="25">Royal Caribbean Cruises</option><option value="26">Seabourn Cruise Line</option><option value="27">Silversea Cruises</option><option value="600032">Viking Ocean Cruises</option><option value="28">Viking River Cruises</option>    </select>
+  </div>
+  <input type="hidden" value="" name="g_tot" id="g_tot">
+  <input type="hidden" value="" id="totnum">
+  <div class="form-group">
+    <label class="frm_capital_latter">SAILING: <img src="/sites/all/themes/intlvoyager/images/loading.gif" alt="loader" id="noCount" style="display: none;"> <span class="bold_price_tag" id="totalnumber"> 23,401</span> </label>
+  </div>
+  <div class="form-group text-center">
+    <input type="button" class=" btn mybtn" id="searchbutton" value="SEARCH CRUISES" onclick="validate()">
+  </div>
+ </form>
+</center>
+
+                </div>
+            </div>
+            <!--<a style="scrollbar-arrow-color:ActiveBorder;font-size:20px;"> <i class="fa-arrow-down   aria-hidden="true"></i></a>-->
+        </div>
+
+    </section>
+
+
+
+    <!-- Start popular-destination Area -->
+			<section class="popular-destination-area section-gap" style="padding-top:10%;font-family: Arial, sans-serif">
+				<div class="container">
+		            <div class="row">
+		                <div class="col-lg-12">
+		                    <div class="title text-center">
+		                        <h1 class="mb-10">Popular Destinations</h1>
+		                        <p>We all live in an age that belongs to the young at heart. Life that is becoming extremely fast, day.</p>
+		                    </div>
+		                </div>
+		            </div>
+					<div class="row">
+						<div class="col-lg-4">
+							<div class="single-destination relative" ">
+								<div class="thumb relative">
+									<div class="overlay overlay-bg"></div>
+									<img class="img-fluid" src="/assets/images/p4.jpg" alt="">
+								</div>
+								<div class="desc">
+									<a href="#" class="price-btn">$150</a>
+									<h4>Mountain River</h4>
+									<p>Paraguay</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="single-destination relative">
+								<div class="thumb relative">
+									<div class="overlay overlay-bg"></div>
+									<img class="img-fluid" src="/assets/images/p2.jpg" alt="">
+								</div>
+								<div class="desc">
+									<a href="#" class="price-btn">$250</a>
+									<h4>Dream City</h4>
+									<p>Paris</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="single-destination relative">
+								<div class="thumb relative">
+									<div class="overlay overlay-bg"></div>
+									<img class="img-fluid" src="/assets/images/p3.jpg" alt="">
+								</div>
+								<div class="desc">
+									<a href="#" class="price-btn">$350</a>
+									<h4>Cloud Mountain</h4>
+									<p>Sri Lanka</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End popular-destination Area -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section>
+
+        <div class=" row" style="padding-top: 15%">
+
+            <div style="background-image: url(/assets/Images/cruise_img.jpg); width: 100%; height: 650px; top: 200px; bottom: 50px; z-index: 0;">
+
+                <div class="col-lg-8 col-lg-offset-2" style="background: #555; height: 600px; top: 0px; bottom: 50px; z-index: 0;">
+                    <div class="row">
+                        <div class="col-lg-6">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        </div>
+
+
+    </section>
+
+
+    <div id="colorlib-services">
+			<div class="container" align="center">
+
+                <div class="container-fluid" style="text-align: center;height:400px; padding-top: 50px; font-size: 40px; >
+                    <h2>Why Book With us</h2>
+                    <hr style="width: 0%; color: #1982d8" />
+                </div>
+
+                 <h2>Why Book With us</h2>
+                    <hr style="width: 15%;padding-bottom:50px; color: #1982d8" />
+
+                <div class="row">
+                    <div class="col-md-3 animate-box text-center">
+                        <div class="services">
+                            <span class="icon" style="color: #1982d8">
+                                <i class="fas fa-5x fa-handshake"></i>
+                            </span>
+                            <h3>24/7 Service</h3>
+                            <p class="">You only need to pay a deposit when you book your trip in advance!</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 animate-box text-center">
+                        <div class="services">
+                            <span class="icon" style="color: #1982d8">
+                                <i class="fas fa-5x fa-piggy-bank"></i>
+
+                            </span>
+							<h3>No Booking Fees</h3>
+							<p>You only need to pay a deposit when you book your trip in advance!</p>
+						</div>
+					</div>
+					<div class="col-md-3 animate-box text-center">
+						<div class="services">
+							<span class="icon" style="color:#1982d8">
+                                <i class="fas fa-5x fa-lock"></i>
+							</span>
+							<h3>Best Price Gurantee</h3>
+							<p> We’re giving you the lowest rate possible – and we guarantee it!</p>
+						</div>
+					</div>
+					<div class="col-md-3 animate-box text-center">
+						<div class="services" >
+							<span class="icon" style="color:#1982d8">
+                                <i class="far fa-5x fa-money-bill-alt"></i>
+							</span>
+							<h3> Flexible Payment</h3>
+							<p>You only need to pay a deposit when you book your trip in advance!</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+    <!--footer area-->
+
+
+    <footer class="footer" >
+        <div class="container bottom_border">
+            <div class="row">
+                <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+                    <h5 class="headin5_amrc col_white_amrc pt2">Find us</h5>
+                    <!--headin5_amrc-->
+                    <p class="mb10">containerzation and docker tool technology</p>
+                    <p><i class="fa fa-location-arrow"></i>solapur ,india </p>
+                    <p><i class="fa fa-phone"></i>+91-9999878398  </p>
+                    <p><i class="fa fa fa-envelope"></i>info@example.com  </p>
+
+
+                </div>
+
+
+                <div class=" col-sm-4 col-md  col-6 col">
+                    <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
+                    <!--headin5_amrc-->
+                    <ul class="footer_ul_amrc">
+                        <li><a href="">Image Rectoucing</a>
+                            <li><a href="">Image Cropping</a></li>
+                    </ul>
+                    <!--footer_ul_amrc ends here-->
+                </div>
+
+
+
+                <div class=" col-sm-4 col-md  col-12 col">
+                    <h5 class="headin5_amrc col_white_amrc pt2">Follow us</h5>
+                    <!--headin5_amrc ends here-->
+                    <a href="https://www.facebook.com"><i id="social-fb" class="fab fa-2x fa-facebook-square"></i></a>
+                    <a href="https://twitter.com"><i id="social-tw" class="fab fa-2x fa-twitter"></i></a>
+                    <a href="https://plus.google.com"><i id="social-g" class="fab fa-2x fa-google-plus-g"></i></a>
+                    <a href=""><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+                    <!-- Social buttons -->
+
+
+                    <!--footer_ul2_amrc ends here-->
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <ul class="foote_bottom_ul_amrc">
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Register</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+            <!--foote_bottom_ul_amrc ends here-->
+            <p class="text-center">Copyright @2018 | Designed With by <a href="#">Abc</a></p>
+
+            <!--social_footer_ul ends here-->
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
