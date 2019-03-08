@@ -1,0 +1,438 @@
+
+<head>
+    <title>Customer details | Cruise Booking</title>
+
+    <link type="text/css" rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+
+	 <link href="/assets/css/bootstrap.css" rel="stylesheet" />
+   <link href="/assets/css/style.css" rel="stylesheet" />
+<link href="/assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="/assets/css/font-awesome.css" rel="stylesheet" />
+    
+    <script src="/assets/JS/Country_state.js"></script>
+    <script src="/assets/JS/Custom.js"></script>
+    <script src="/assets/JS/jquery1.js"></script>
+    <link href="/assets/CSS/main.css" rel="stylesheet" />
+        <link href="/assets/CSS/bootstrap.css" rel="stylesheet" />
+<link href="/assets/css/all.min.css" rel="stylesheet" />
+    
+        <script type="text/javascript">
+              function funLoad()
+              {
+
+                    }
+
+
+              function validate()
+              {
+                  var error = document.getElementById('err');
+                  var success = document.getElementById('succes')
+                  //  var name1 = document.getElementById('name');
+                  // var mail = document.getElementById('email');
+                  //var msg = document.getElementById('msg');
+
+                  if ( name=="" || email=="" || addr=="") {
+                      error.style.display = 'block';
+
+                  } else {
+                    //  success.style.display = 'block';
+                     // alert("Data saved successfully !");
+                  }
+
+
+              }
+
+
+
+          </script>
+          <style>
+
+
+               .conformbtn {
+                  float: right;
+                  width: 100px;
+                  height: 50px;
+                  background:#4897cc;
+              }
+
+                  .conformbtn :hover {
+                      background: #263fa0;
+                  }
+
+               #loading {
+                     position:fixed;
+                     width:100%;
+                     height:100vh;
+                     background:#fff url(/assets/Images/Preloader_3.gif) no-repeat center;
+                     z-index:99999;
+                 }
+         .alert {
+        padding: 20px;
+        background-color: #f44336;
+        color: white;
+        display:none;
+      }
+
+      .closebtn {
+        margin-left: 15px;
+        color: white;
+        font-weight: bold;
+        float: right;
+        font-size: 22px;
+        line-height: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .closebtn:hover {
+        color: black;
+      }
+
+      .alert.success {background-color: #4CAF50;}
+
+       .conformbtn {
+                  float: right;
+                  width: 200px;
+                  height: 50px;
+                  background: #4878c8;
+                  color:white;
+              }
+
+                  .conformbtn :hover {
+                      background: #263fa0;
+                      color:white;
+                      font-weight:bold;
+                  }
+
+          </style>
+      </head>
+
+
+      <body onload="addRow()" Style="background:f3f2f2;">
+
+           <div id="loading">
+
+          </div>
+
+
+<% include divs/navbar %>
+
+<div class="container">
+          <div class="section-center">
+      			<div class="container col-lg-12">
+      				<div class="row">
+
+
+                          <div class="col-lg-6">
+                              <div class="booking-form">
+
+                                  <h2> Booking Detail</h2>
+
+                                  <div >
+                                      <h4>Tour Detail</h4>
+
+                                      <table>
+                                          <tbody>
+                                              <tr>
+                                                  <td>Tour :</td>
+                                                  <td id="tour"> </td>
+                                              </tr>
+
+                                               <tr>
+                                                  <td>Date :</td>
+                                                  <td id="date"></td>
+                                              </tr>
+                                               <tr>
+                                                  <td>Number of Person's:</td>
+                                                  <td id="nP"></td>
+
+                                              </tr>
+
+                                          </tbody>
+
+                                      </table>
+                                       <a href="AllCruises.html">Change Tour</a>
+                                      <hr />
+                                      <br />
+                                      <h4>Room Detail</h4>
+
+                                      <table>
+                                          <tbody>
+                                              <tr>
+                                                  <td>Room :</td>
+                                                  <td id="roomName"></td>
+                                              </tr>
+
+                                               <tr>
+                                                  <td>capacity :</td>
+                                                  <td id="capacity"></td>
+                                              </tr>
+                                               <tr>
+                                                  <td>Price:</td>
+                                                  <td id="roomPrice"></td>
+
+                                              </tr>
+
+                                          </tbody>
+
+                                         </table>
+                                       <a href="BookingDetails.html">Change Room</a>
+                                      <hr />
+
+                                      <h4>Meal Details</h4>
+
+                                      <table>
+                                          <tbody>
+                                              <tr>
+                                                  <td>Food :</td>
+                                                  <td></td>
+                                              </tr>
+
+                                               <tr>
+                                                  <td>Drink :</td>
+                                                  <td></td>
+                                              </tr>
+
+                                          </tbody>
+                                         </table>
+                                        <a href="DiningPage.html">Change Meal</a>
+                                      <hr />
+
+
+                                     <h3>  <h5> Grand Total: _________&#8377;</h5></h3>
+                                  </div>
+                                  <h5> </h5>
+                                  <h5></h5>
+                                  </div>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="booking-form">
+                                  <form>
+                                      <div class="form-group">
+                                          <h5 class="form-label">Name</h5>
+                                          <input class="form-control" type="text" p placeholder="Enter a full name" id="name" required/>
+
+                                          <h5 id="vname"></h5>
+
+                                      </div>
+                                      <div class="row">
+                                          <div class="form-group col-md-6">
+                                              <h5 class="form-label">Email</h5>
+                                              <input class="form-control" type="email" placeholder="Enter a email" id="email" required/>
+
+                                              <h5 class="select-arrow" id="vemail"></h5>
+
+                                          </div>
+
+                                          <div class="form-group col-md-6">
+                                              <h5 class="form-label">Mobile</h5>
+                                              <input class="form-control" type="text"  pattern="[789][0-9]{9}" maxlength="10"  placeholder="Enter a Mobile number" id="mob"  required/>
+
+                                              <h5 class="select-arrow" id="vmobile"></h5>
+
+                                          </div>
+      						</div>
+                                      	<div class="form-group">
+      									<h5 class="form-label">Address</h5>
+      									<input class="form-control" type="text" placeholder="Enter a Address" id="addr" required/>
+
+                                            	<h5 class="select-arrow" id="vaddr"></h5>
+
+      								</div>
+
+      										<div class="form-group">
+      											<h5 class="form-label"> Date Of Birth</h5>
+      											<input class="form-control" type="date" required id="Dob"/>
+                                                  <h5 id="vDob"></h5>
+      										</div>
+
+
+
+                                      <div class="row">
+                                          <div class="col-sm-4">
+                                              <h5 class="form-label">Country</h5>
+
+                                              <select class="form-control" onchange="print_state('states',this.selectedIndex);" name="country" id="country"></select>
+                                              <script type="text/javascript" language="javascript">
+                                                  print_country("country");
+                                              </script>
+                                          </div>
+                                          <div class="col-sm-4">
+                                              <h5 class="form-label">State</h5>
+
+                                              <select class="form-control" onchange="print_cities('cities',this.selectedIndex);" name="state" id="states"></select>
+                                              <script type="text/javascript" language="javascript">
+                                                  print_state("states");
+                                              </script>
+                                          </div>
+                                          <div class="col-sm-4">
+                                              <h5 class="form-label">City</h5>
+
+                                              <input type="text" class="form-control" name="city" id="cities" required></input>
+                                              <script type="text/javascript" language="javascript">
+                                                  print_cities("cities");
+                                              </script>
+                                          </div>
+
+                                      </div>
+                                      <h5 class="panel-success" style="background:#27ae60" id="result"></h5>
+
+                                      <div class="alert" id="err">
+        <h5 class="closebtn" onclick="this.parentElement.style.display='none';">&times;</h5>
+        <strong>Please!</strong> Fill the Detail.
+      </div>
+      <div class="alert success" id="succes">
+        <h5 class="closebtn" onclick="this.parentElement.style.display='none';">&times;</h5>
+        <strong>Success!</strong> Message Sent Successfully.
+      </div>
+
+                                      <div class="form-btn" style="padding-top: 50px;">
+                                          <button  class="submit-btn" onclick="validate()">Save</button>
+                                      </div>
+                                  </form>
+                              </div>
+                          </div>
+
+                           </div>
+                          <div class="col-md-12 container" style="padding-top:10%">
+                              <div class="booking-form" >
+
+                                  <div>
+                                  </div>
+                                   <script>
+
+                                       function addRow () {
+                                           getDetail();
+                                           var preld = document.getElementById('loading');
+                                           preld.style.display='none';
+
+
+
+                                           var num=sessionStorage.getItem("total");
+
+                                           for(var i=1;i<parseInt(num);i++){
+
+                                               document.querySelector('#content').insertAdjacentHTML(
+                                                 'afterbegin',
+
+
+                                                 `<form> <div class="container">
+                                                 <h2>Guest ` +parseInt(num-i) +`<h2>
+                                                 <div class="row">
+                                                 <br>
+
+                                              <div class="form-group col-md-6">
+                                                  <h5 class="form-label">Name</h5>
+                                                  <input class="form-control" type="text" placeholder="Enter a name" id="name1" required>
+
+
+                                              </div>
+
+
+                                                   <div class="form-group col-md-4">
+                                                  <h5 class="form-label">Mobile</h5>
+                                                  <input class="form-control"  type="text"  pattern="[789][0-9]{9}" maxlength="10" id="mob1" placeholder="Enter a Mobile number" required>
+
+                                              </div>
+
+
+                                                  </div>
+                                       <div class="row">
+
+                                          <div class="form-group col-md-3">
+                                                  <h5 class="form-label">Gender</h5>
+                                                  <br>
+                                                  <label class="radio-container m-r-45">
+                                                      Male
+                                                      <input type="radio" checked="checked" name="gender">
+                                                      <h5 class="checkmark"></h5>
+                                                  </label>
+                                                  <label class="radio-container">
+                                                      Female
+                                                      <input type="radio" name="gender">
+                                                      <h5 class="checkmark"></h5>
+                                                  </label>
+
+
+                                          </div>
+
+                                        <div class="form-group col-md-4">
+                                                  <h5 class="form-label">Age</h5>
+                                                  <input class="form-control" type="number"  min="1" placeholder="Enter a age" id="age" required>
+
+                                              </div>
+                                              <div class="form-group col-md-3">
+                                                  <h5 class="form-label">Id Proof</h5>
+                                                  <select class="form-control" >
+                                                      <option>Aadhar card</option>
+                                                      <option>Pan card</option>
+                                                      <option>Passport</option>
+
+
+                                                  </select>
+
+
+                                              </div>
+
+
+                                              </div>
+
+
+                                            </div>
+
+                                                 </div>
+                                                  <hr>
+                                                 <div class="row">
+                                                     </div>
+                                               </form>`
+        );
+                                           }
+                                       }
+
+
+
+                                       function getDetail()
+                                       {
+                                           document.getElementById('tour').innerHTML=sessionStorage.getItem("source")+" TO "+sessionStorage.getItem("destination");
+
+                                           document.getElementById('date').innerHTML=sessionStorage.getItem("currentDate");
+                                           document.getElementById('nP').innerHTML=sessionStorage.getItem("total");
+                                           document.getElementById('roomName').innerHTML=sessionStorage.getItem("rName");
+
+                                       }
+                                       </script>
+
+                                  <form>
+
+                                      <div class="container" id="content">
+                                      </div>
+
+                                      <div class="up-offset-1">
+
+                                          <button class="submit-btn">Make Payment</button>
+
+                                      </div>
+
+                                  </form>
+
+
+                              </div>
+
+                          </div>
+
+      				</div>
+      			</div>
+
+</div>
+
+
+            <% include divs/topScrollBtn %>
+                 <!--footer area-->
+            <% include divs/footer %>
+
+
+
+
+
+
+      </body>

@@ -11,10 +11,20 @@ router.get('/login', (req, res) => res.render('login'));
 // Register Page
 router.get('/register', (req, res) => res.render('register'));
 
+router.get('/about', (req, res) => res.render('AboutCruise'));
+router.get('/contact', (req, res) => res.render('contact'));
+
+
 router.get('/index', (req, res) => res.render('index'));
 
-router.get('/book-cruise', (req, res) => res.render('bookCruise'));
+router.get('/dining', (req, res) => res.render('dining'));
 
+router.get('/avail-cruise', (req, res) => res.render('AvailableCruise'));
+router.get('/customer-details', (req, res) => res.render('custumerDetail'));
+
+router.get('/booking-details', (req, res) => res.render('BookingDetails'));
+
+router.get('/book-cruise', (req, res) => res.render('bookCruise'));
 
 // Register
 router.post('/register', (req, res) => {

@@ -194,6 +194,7 @@
 .single-destination .desc p {
   color: #fff;
   font-size: 14px;
+
   font-weight: 300;
   margin-bottom: 0px;
 }
@@ -204,7 +205,7 @@
 
 .single-destination:hover .overlay-bg {
   opacity: 1;
-
+  
 }
 
 @media (max-width: 991px) {
@@ -343,19 +344,109 @@
 
 .single-destination .desc h4 {
   color: #fff;
-
+ 
 }
 
 .single-destination .desc p {
   color: #fff;
   font-size: 14px;
-  font-weight: 300;
-  margin-bottom: 0px;
-
-   background:rgba(62, 62, 62, 0.74);
-
+   
 
 }
+
+ 
+
+.myblue {
+    background:#1e62d8;
+    color:white;
+}
+  
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+.middle1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.menu{
+  width: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.item{
+  border-top: 1px solid #2980b9;
+  overflow: hidden;
+}
+.btn1{
+  display: block;
+  padding: 16px 20px;
+  background: #3498db;
+  color: white;
+  position: relative;
+}
+.btn1:before{
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background:#3498db;
+  left: 20px;
+  bottom: -7px;
+  transform: rotate(45deg);
+}
+.btn1 i{
+  margin-right: 10px;
+}
+.smenu{
+  background: #333;
+  overflow: hidden;
+  transition: max-height 0.3s;
+  max-height: 0;
+}
+.smenu a{
+  display: block;
+  padding: 16px 26px;
+  color: white;
+  font-size: 14px;
+  margin: 4px 0;
+  position: relative;
+}
+.smenu a:before{
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background: #3498db;
+  left: 0;
+  top: 0;
+  transition: 0.3s;
+  opacity: 0;
+}
+.smenu a:hover:before{
+  opacity: 1;
+}
+.item:target .smenu{
+  max-height: 50em;
+}
+.naviBlack {
+
+background:#34495e;
+height:400px;
+color:white;
+margin:0px;
+-webkit-box-shadow: 1px -4px 111px -12px rgba(0,0,0,0.7);
+-moz-box-shadow: 1px -4px 111px -12px rgba(0,0,0,0.7);
+box-shadow: 1px -4px 111px -12px rgba(0,0,0,0.7);
+}
+
 
 .single-destination:hover .price-btn {
   opacity: 1;
@@ -395,7 +486,7 @@
 
 .single-other-issue:hover h4 {
   color: #f8b600;
-
+ 
 }
 
 .single-other-issue:hover .thumb img {
@@ -554,14 +645,14 @@ h1, h2, h3, h4, h5, h6
 	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
 	text-shadow: rgba(0,0,0,.01) 0 0 1px;
 }
-h1::selection,
-h2::selection,
-h3::selection,
-h4::selection,
-h5::selection,
+h1::selection, 
+h2::selection, 
+h3::selection, 
+h4::selection, 
+h5::selection, 
 h6::selection
 {
-
+	
 }
 ::-webkit-input-placeholder
 {
@@ -575,14 +666,14 @@ h6::selection
 	font-weight: 500 !important;
 	color: #a5a5a5 !important;
 }
-::-moz-placeholder /* Firefox 19+ */
+::-moz-placeholder /* Firefox 19+ */ 
 {
 	font-size: 14px !important;
 	font-weight: 500 !important;
 	color: #a5a5a5 !important;
-}
+} 
 :-ms-input-placeholder
-{
+{ 
 	font-size: 14px !important;
 	font-weight: 500 !important;
 	color: #a5a5a5 !important;
@@ -707,7 +798,7 @@ section
 	transition: all 200ms ease;
 }
 .header.scrolled
-{
+{	
 	top: 15px;
 }
 .header.scrolled .header_content::before
@@ -1783,54 +1874,39 @@ input:last-of-type
 	color: #FFFFFF;
 }
 
-/*********************************
-15.1 Newsletter
-*********************************/
 
-.newsletter
-{
-	padding-bottom: 85px;
-	border-bottom: solid 2px #4d4e4e;
-}
-.newsletter_form_container
-{
-	width: 60%;
-	margin-top: 48px;
-}
-.newsletter_email
-{
-	width: calc(100% - 164px);
-	height: 42px;
-	border: none;
-	padding-left: 27px;
-	font-weight: 500;
-	color: #1a1a1a;
-}
-.newsletter_email:focus
-{
-	outline: solid 2px #ffb606;
-}
-.newsletter_submit_btn
-{
-	width: 164px;
-	height: 42px;
-	border: none;
-	background: #ffb606;
-	color: #FFFFFF;
-	font-size: 14px;
-	font-weight: 500;
-	cursor: pointer;
-}
-.newsletter_submit_btn:focus
-{
-	border: solid 2px #FFFFFF;
-}
+/*********************************/
+h2 {
 
-/*********************************
+            text-transform:uppercase;
+            letter-spacing:1px;
+            color:black;
+        }
+
+        .up-offset-1 {
+            margin-top:150px;
+        }
+.fontstyle {
+    font-family:ubuntubold, Arial, sans-serif;font-size:32px;color:#7a7a7a;    font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-weight: normal;
+}
+        p {
+
+            text-align:justify;
+            letter-spacing:2px;
+        }
+
+ /*********************************
 15.2 Footer Content
 *********************************/
 
-.footer_content
+
+
+.footer_content 
 {
 	padding-top: 80px;
 	padding-bottom: 83px;
@@ -1923,140 +1999,4 @@ input:last-of-type
 .footer_social .menu_social_item:last-child
 {
 	margin-right: 0px;
-
-
-
-
-	        .cover {
-	            /*background :linear-gradient(rgba(21, 113, 215, 0.89) 0%,),url(Images/344294.jpg) center;*/
-	            background: linear-gradient(rgba(0,0,0,0.1) 50%,rgba(0,0,0,0.1)), url(/assets/Images/344294.jpg) center;
-	            /*background:  linear-gradient(135deg,rgba(30, 86, 249, 0.99) 0%,rgba(0,0,0,0.1) 100%),url(Images/344294.jpg) center;*/
-	            background-size: cover;
-	            min-height: 50rem;
-	            height: 750px;
-	            border-radius: 0;
-	            width: 100%;
-	            color: #fff;
-	            padding-top: 1rem;
-	        }
-
-	        .fa-credit-card:before {
-	            content: "\f09d";
-	        }
-
-	        .cover h1 {
-	            font-weight: 200;
-	        }
-
-	        .cover p.lead {
-	            margin: 2rem auto;
-	            color: rgba(255, 255, 255, 0.75);
-	        }
-
-	        .cover .cover-container {
-	            display: table;
-	            height: 100%;
-	            min-height: 44rem;
-	            margin: 0 auto;
-	        }
-
-	        .atag:hover {
-	            border: double 1px;
-	            border-radius: 4px;
-	            color: #777;
-	        }
-
-	        .atag {
-	            font-size: 20px;
-	            text-align: center;
-	            color: black;
-	            padding-left: 3px;
-	        }
-
-	        .trans {
-	            /*background: rgba(51, 52, 55, 0.86);*/
-	            background:#e1dddd;
-	            color:rgb(39, 50, 56);
-	            border:thick black;
-	            border-color:black;
-	        }
-
-
-	        .collapsible {
-	            background-color: #777;
-	            color: white;
-	            cursor: pointer;
-	            padding: 18px;
-	            width: 100%;
-	            border: none;
-	            text-align: left;
-	            outline: none;
-	            font-size: 15px;
-	        }
-
-	            .active, .collapsible:hover {
-	                background-color: #555;
-	            }
-
-	        .content {
-	            padding: 0 18px;
-	            max-height: 0;
-	            overflow: hidden;
-	            transition: max-height 0.2s ease-out;
-	            background-color: #f1f1f1;
-	        }
-
-	        .footer {
-	            background: rgb(39, 50, 56);
-	        }
-
-	        .mybtn {
-	            background: #3085b8;
-	            color: white;
-	        }
-
-	            .mybtn:hover {
-	                background: #0f5a9e;
-	                color: white;
-	            }
-
-
-
-	        .navbar.solid {
-	            background-color: #490D40;
-	            transition: background-color 1s ease 0s;
-	            box-shadow: 0 0 4px grey;
-	            color: #C57ED3;
-	            transition: color 1s ease 0s;
-	        }
-
-	        .navbar-inverse {
-	            color: #C57ED3;
-	            transition: color 1s ease 0s;
-	        }
-
-	        .mynav {
-	            background: white
-	            /*rgba(113, 111, 111, 0.54);*/
-	            ;
-	            border: none;
-	            box-shadow: #fff 10px 10px inset;
-	            height: 80px;
-	            position: fixed;
-	            width: 100%;
-	            opacity: 1;
-	            z-index: 1;
-	            top: 0;
-	            left: 0;
-	        }
-	        body {
-	  font-family: 'Montserrat', sans-serif;
-	  font-weight: 400;
-	  font-size: 14px;
-	  line-height: 1.7;
-	  color: #595959;
-	  background: #fff; }
-
-	        .mybox {
-	            border-radius: 150px; text-align: center; height: 300px; background: #eeeeee; box-shadow: 0px 0px 60px 10px rgba(0,0,0,0.3);
-	        }
+}

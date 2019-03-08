@@ -1,0 +1,199 @@
+<head>
+    <title>Contact | Cruise Booking</title>
+    <link rel="icon" href="/assets/Images/cicon3.jpg" type="image/gif" sizes="16x16">
+
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="/assets/css/font_style.css" rel="stylesheet" />
+   <link href="/assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="/assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/css/main.css" rel="stylesheet" />
+     <link href="/assets/css/bootstrap.css" rel="stylesheet" />
+   <link href="/assets/css/all.css" rel="stylesheet" />
+    <script src="/assets/JS/Custom.js"></script>
+    <script src="/assets/JS/modernizr-2.6.2.min.js"></script>
+    <link href="/assets/css/all.min.css" rel="stylesheet" />
+    <script src="/assets/JS/toggle.js"></script>
+    <link href="/assets/css/style.css" rel="stylesheet" />
+
+
+    <style>
+
+         #loading {
+               position:fixed;
+               width:100%;
+               height:100vh;
+               background:#fff url(/assets/images/Preloader_3.gif) no-repeat center;
+               z-index:99999;
+           }
+         .cover {
+            background: linear-gradient(rgba(0,0,0,0.5) 50%,rgba(0,0,0,0.5)), url(/assets/Images/Contactus-banner.jpg) center;
+            background-size: cover;
+            min-height: 50rem;
+            height: 500px;
+            border-radius: 0;
+            width: 100%;
+            color: #fff;
+            padding-top: 1rem;
+
+        }
+
+
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  display:none;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+.alert.success {background-color: #4CAF50;}
+
+    </style>
+    <script>
+        function preload() {
+
+
+            var preld = document.getElementById('loading');
+            preld.style.display = 'none';
+        }
+
+
+        function validate()
+        {
+            var error = document.getElementById('err');
+            var success = document.getElementById('succes')
+            var name = document.getElementById('name');
+            var mail = document.getElementById('email');
+            var msg = document.getElementById('msg');
+
+            if (name=="" ) {
+                error.style.display = 'block';
+
+            } else {
+               success.style.display = 'block';
+
+            }
+
+
+        }
+    </script>
+
+</head>
+<body onload="preload()">
+
+
+    <div id="loading">
+
+    </div>
+
+    <section class="cover">
+
+<% include divs/navbar %>
+
+  </section>
+
+
+    <div align="center" class="up-offset-1">
+      <h2>Contact <span style="color:#0094ff">  Us</span></h2>
+        <hr  style="background:#0094ff;height:3px;width:15%;font-weight:bold"/>
+    </div>
+
+
+    <div class="container up-offset-1">
+
+
+        <div class="col-lg-6">
+
+            <div class="img-circle"  >
+                <img src="/assets/Images/cicon3.jpg" class="img-circle" style="height:200px;width:auto"/>
+                <h2> Cruise Booking</h2>
+            </div>
+
+            <div style="color:black;letter-spacing:2px">
+                <h3> Contact Detail</h3>
+                <div class=" col-lg-6 ">
+                    <h4><i class="fa fa-location-arrow"></i>solapur ,india </h4>
+                    <h4><i class="fa fa-phone"></i>+91-9999878398  </h4>
+                    <h4><i class="fa fa fa-envelope"></i>info@example.com  </h4>
+                </div>
+
+            </div>
+
+
+        </div>
+        	                 <div class="col-md-6">
+                        <div class="booking-form">
+                            <form>
+                                 <h2 align="center">Enquiry <span style="color:#0094ff"> Form</span></h2>
+                                    <br />
+                                <div class="form-group">
+                                    <span class="form-label">Name</span>
+                                    <input class="form-control" type="text" p placeholder="Enter a full name" id="name"  required/>
+
+                                    <span id="vname"></span>
+
+                                </div>
+                                    <div class="form-group">
+                                        <span class="form-label">Email</span>
+                                        <input class="form-control" type="email" placeholder="Enter a email" id="email" required/>
+
+                                        <span class="select-arrow" id="vemail"></span>
+
+                                    </div>
+
+
+                                	<div class="form-group">
+									<span class="form-label">Message</span>
+									<input class="form-control" type="text" placeholder="Write your query" style="height:100px;" id="msg" required/>
+
+                                      	<span class="select-arrow" id="vaddr"></span>
+
+								</div>
+                                <div class="alert" id="err">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  <strong>Please!</strong> Fill the Detail.
+</div>
+<div class="alert success" id="succes">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  <strong>Success!</strong> Message Sent Successfully.
+</div>
+
+
+
+
+
+                                <span class="panel-success" style="background:#27ae60" id="result"></span>
+
+                                <div class="form-btn" style="padding-top: 50px;">
+                                    <button class="submit-btn" onclick="validate()" style="float:right">Send </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+
+    </div>
+
+
+    <% include divs/topScrollBtn %>
+         <!--footer area-->
+    <% include divs/footer %>
+
+
+
+</body>

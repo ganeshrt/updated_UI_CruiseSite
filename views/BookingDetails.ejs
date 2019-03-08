@@ -2,375 +2,538 @@
     <!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"/>-->
 <!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>-->
 <!--<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>-->
-<html>
+
 
 <head>
-	<% include divs/head %>
+	<<title>Roo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" href="/assets/Images/cicon3.jpg" type="image/gif" sizes="16x16">
+  <link href="/assets/css/all.min.css" rel="stylesheet" />
+  
   <link href="/assets/css/footer.css" rel="stylesheet" />
   <link href="/assets/css/font-awesome.min.css" rel="stylesheet" />
   <link href="/assets/css/font-awesome.css" rel="stylesheet" />
   <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
   <link href="/assets/css/main.css" rel="stylesheet" />
   <link href="/assets/css/bootstrap.css" rel="stylesheet" />
-
-  <style>
-      .id {
-          background:#ffd800;
-      }
-      .mybtn {
-          background:#808080;
-          float:left;
-          width:30%;
-          height:80px;
-      }
-      .btn-list {
-           background:#2b77f4;
-          float:left;
-          width:20%;
-         height:10%;
-      }
-          .mybtn:hover {
-              background:#4878c8;
-          }
-          .act {
-              background:#17ae2a;
-          }
-      .conformbtn {
-           float:left;
-          width:50%;
-          height:50px;
-           background:#4878c8;
+	<script src="/assets/JS/Custom.js"></script>
+	<link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+<link href="/assets/css/all.min.css" rel="stylesheet" />
+    
+  <script src="/assets/JS/jquery1.js"></script>
 
 
-         }
-      .conformbtn :hover{
-          background:#263fa0;
+	<style>
+		.id {
+				background: #ffd800;
+		}
 
-      }
+		.mybtn {
+				background: #808080;
+				float: left;
+				width: 30%;
+				height: 80px;
+		}
 
-      .side-container {
-          background:#e2dfdf;position:fixed;float:right;margin-left:70%;height:80%;
-      }
-      .eSel {
-          background: #2f2d2d;
-          border: none;
-          text-decoration: #fff;
-          width: 50%;
-          color: #fff;
-      }
+		.btn-list {
+				background: #2b77f4;
+				float: left;
+				width: 20%;
+				height: 100%;
+		}
 
-  </style>
+		.mybtn:hover {
+				background: #4878c8;
+		}
 
+		.act {
+				background: #17ae2a;
+		}
+
+	 .conformbtn {
+				float: left;
+				width: 200px;
+				height: 50px;
+				background: #4878c8;
+		}
+
+				.conformbtn :hover {
+						background: #263fa0;
+						color:white;
+						font-weight:bold;
+				}
+
+		.side-container {
+				background: #e2dfdf;
+				position: fixed;
+				float: right;
+				margin-left: 70%;
+				height: 80%;
+		}
+
+		.eSel {
+				background: #2f2d2d;
+				border: none;
+				text-decoration: #fff;
+				width: 50%;
+				color: #fff;
+		}
+
+		#loading {
+				position: fixed;
+				width: 100%;
+				height: 100vh;
+				background: #fff url(/assets/Images/Preloader_3.gif) no-repeat center;
+				z-index: 99999;
+		}
+
+#scrl::-webkit-scrollbar {
+width: 8px;
+background:#888;
+}
+
+/* Track */
+#scrl::-webkit-scrollbar-track {
+background: #f1f1f1;
+}
+
+/* Handle */
+#scrl::-webkit-scrollbar-thumb {
+background: #888;
+}
+
+/* Handle on hover */
+#scrl::-webkit-scrollbar-thumb:hover {
+background: #4878c8;
+}
+
+</style>
+
+<script>
+		function preload()
+		{
+
+				sessionStorage.setItem('np')=Number(0);
+				var preld = document.getElementById('loading');
+				preld.style.display = 'none';
+
+		}
+
+
+		function validate()
+		{
+				if(np< sessionStorage.getItem('total'))
+				{
+						alert("please select rooms");
+				}
+
+		}
+
+
+</script>
+<script type="text/javascript">
+
+
+
+
+		function order()
+		{
+
+				document.querySelector('#myId').insertAdjacentHTML(
+'afterbegin',
+`<div class="row">
+			<div class="booking-cta container">
+					 <div class="row">
+			<h4>ROOM Name 1 is Added</h4>
+			<h5>Desk: <span></span> Adult: <span></span>Room:<span></span><h2>
+			<br>
+			<h4>Prices :<span></span>&#8377;<h3>
+			</div>
+
+
+							 <input type="button" style="background:#f84848" value="Cancel" onclick="removeRow(this)">
+
+			 </div>
+
+
+</div> <hr>`
+
+);
+
+
+		}
+
+
+		function removeRow(input) {
+				//  var f = document.getElementById('myId');
+				// f.removeChild(f.firstChild);
+				input.parentNode.remove();
+
+		}
+
+		var mybtn = document.getElementsByClassName('mybtn');
+		mybtn.onClick = function () {
+
+		}
+
+
+
+
+</script>
+
+<script>
+		$(document).ready(function () {
+
+				$(".filter-button").click(function () {
+						var value = $(this).attr('data-filter');
+
+						if (value == "all") {
+								//$('.filter').removeClass('hidden');
+								$('.filter').show('1000');
+						}
+						else {
+								//            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+								//            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+								$(".filter").not('.' + value).hide('3000');
+								$('.filter').filter('.' + value).show('3000');
+
+						}
+				});
+
+				if ($(".filter-button").removeClass("active")) {
+						$(this).removeClass("active");
+				}
+				$(this).addClass("active");
+
+		});
+</script>
 </head>
 
-<body>
-
-    <script src="JS/jquery1.js"></script>
-
-    <script>
-        $(document).ready(function () {
-
-            $(".filter-button").click(function () {
-                var value = $(this).attr('data-filter');
-
-                if (value == "all") {
-                    //$('.filter').removeClass('hidden');
-                    $('.filter').show('1000');
-                }
-                else {
-                    //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
-                    //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
-                    $(".filter").not('.' + value).hide('3000');
-                    $('.filter').filter('.' + value).show('3000');
-
-                }
-            });
-
-            if ($(".filter-button").removeClass("active")) {
-                $(this).removeClass("active");
-            }
-            $(this).addClass("active");
-
-        });
-    </script>
-    <script type="text/javascript">
-        function myfun(deck)
-        {
-
-            document.querySelector('#myId').insertAdjacentHTML(
-   'afterbegin',
-   `<div class="row">
-            <span> ADDED</span>
-     <input type="button" value="X" onclick="removeRow(this)">
-   </div>`
-  )
-        }
-        function removeRow(input) {
-          //  var f = document.getElementById('myId');
-          // f.removeChild(f.firstChild);
-            input.parentNode.remove();
-
-        }
-
-        var mybtn = document.getElementsByClassName('mybtn');
-        mybtn.onClick = function () {
-
-        }
-
-        function funLoad()
-        {
-            document.getElementById('span1').innerHTML=sessionStorage.getItem("totalNum");
-
-        }
-
-    </script>
-</head>
-
-<div style="font-family: 'Montserrat', sans-serif;background:#f3f2f2;" onload="funLoad()" >
-
-    <div class="container">
-        <div class="row">
-
-            <div align="center" class="" style="width: 100%;">
-                <button class="btn-list  filter-button" data-filter="all">All </button>
-                <button class="btn-list  filter-button" data-filter="rooms">Rooms</button>
-                <button class="btn-list filter-button" data-filter="FR">Family Rooms</button>
-                <button class="btn-list filter-button" data-filter="Luxury">Luxury Pods</button>
-                <button class="btn-list  filter-button" data-filter="Dorms">Dorms</button>
-
-            </div>
-            <br />
-            <section>
-
-                <div style="padding-top: 50px;"></div>
-
-
-                <div class="gallery_product col-lg-10  filter rooms">
-
-                    <div class="col-lg-6">
-                        <img src="/assets/Images/Family%20rooms/FR3.jpg" class="img-responsive" />
-                    </div>
-                    <div class="col-lg-6" align="center">
-
-                        <br />
-                        <div class="font-robo">Double Bed room</div>
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td>View :</td>
-                                    <td>Big Window</td>
-                                </tr>
-                                <tr>
-                                    <td>Capacity :</td>
-                                    <td>2</td>
-                                </tr>
-                                <tr>
-                                    <td>Washroom :</td>
-                                    <td>Attached Washroom</td>
-                                </tr>
-                                <tr>
-                                    <td>Additional Bed:</td>
-                                    <td>No</td>
-                                </tr>
-                                <tr>
-                                    <td>Select Deck:
-                                    </td>
-                                    <td>
-                                        <select>
-                                            <option>A</option>
-                                            <option>B</option>
-                                            <option>C</option>
-                                            <option>D</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Price Per Person:
-                                    </td>
-                                    <td></td>
-                                </tr>
-
-                            </tbody>
-                        </table>
-
-
-                        <div class="row" style="padding-top: 50px; color: #fff;">
-                            <div style="background: #2b77f4; float: left; width: 40%; height: 80px;"></div>
-                            <div style="background: #2f2d2d; float: left; width: 30%; height: 80px; color: #fff;">
-                                No.of rooms
-                            <select class="form-control eSel" align="center">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                            </select>
-
-                            </div>
-                            <button class="mybtn btn1" onclick="myfun()">ADD</button>
-                            <!--<input type="button" class="mybtn btn1" onclick="myfun()" value="ADD" />-->
+<body onload="preload()" style="font-family: 'Montserrat', sans-serif;">
 
 
 
-                        </div>
-                        <div class="row">
-                        </div>
+<div id="loading1">
+</div>
+
+<section>
+
+<% include divs/navbar %>
+
+</section>
+
+<div class="container">
+<div class="col-lg-12">
+		<div class="row">
+
+				<div align="center" class="" style="width: 100%;height:100px;">
+						<button class="btn-list  filter-button" data-filter="all">All </button>
+						<button class="btn-list  filter-button" data-filter="rooms">Rooms</button>
+						<button class="btn-list filter-button" data-filter="FR">Family Rooms</button>
+						<button class="btn-list filter-button" data-filter="Luxury">Luxury Pods</button>
+						<button class="btn-list  filter-button" data-filter="Dorms">Dorms</button>
+
+				</div>
+				<br />
 
 
-                    </div>
-                </div>
+				<section>
+
+						<div style="padding-top: 50px;"></div>
+</div>
+</div>
+<div class="col-lg-12 container" id="scrl" style="overflow-y:scroll;height:500px" >
+								<div class="booking-form col-lg-12  filter rooms">
+
+								<div class="col-lg-6 panel-body ">
+										<img src="/assets/Images/Family%20rooms/FR3.jpg" class="img-thumbnail img-responsive" />
+								</div>
+								<div class="col-lg-6" align="center">
+
+										<div class="page-header" id="rm">Double Bed room</div>
+										<table>
+												<tbody>
+														<tr>
+																<td>View :</td>
+																<td>Big Window</td>
+														</tr>
+														<tr>
+																<td>Capacity :</td>
+																<td>2</td>
+														</tr>
+														<tr>
+																<td>Washroom :</td>
+																<td>Attached Washroom</td>
+														</tr>
+														<tr>
+																<td>Additional Bed:</td>
+																<td>No</td>
+														</tr>
+														<tr>
+																<td>Select Deck:
+																</td>
+																<td>
+																		<select>
+																				<option>A</option>
+																				<option>B</option>
+																				<option>C</option>
+																				<option>D</option>
+																		</select>
+																</td>
+														</tr>
+														<tr>
+																<td>Price Per Person:
+																</td>
+																<td></td>
+														</tr>
+
+												</tbody>
+										</table>
 
 
-                <div class="gallery_product col-lg-10  filter FR">
+										<div class="row panel-footer">
+												<div style="background: #2b77f4; float: left; width: 40%; height: 80px;">Price : </div>
+												<div style="background: #2f2d2d; float: left; width: 30%; height: 80px; color: #fff;">
+														No.of rooms
+												<select class="form-control eSel" align="center" id="deck">
+														<option>1</option>
+														<option>2</option>
+														<option>3</option>
+														<option>4</option>
+												</select>
 
-                    <div class="col-lg-6">
-                        <img src="/assets/Images/Family%20rooms/FR2.jpg" class="img-responsive" />
-                    </div>
-                    <div class="col-lg-6" align="center">
-
-                        <br />
-                        <div class="font-robo">Double Bed room</div>
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td>View :</td>
-                                    <td>Big Window</td>
-                                </tr>
-                                <tr>
-                                    <td>Capacity :</td>
-                                    <td>2</td>
-                                </tr>
-                                <tr>
-                                    <td>Washroom :</td>
-                                    <td>Attached Washroom</td>
-                                </tr>
-                                <tr>
-                                    <td>Additional Bed:</td>
-                                    <td>No</td>
-                                </tr>
-                                <tr>
-                                    <td>Select Deck:
-                                    </td>
-                                    <td>
-                                        <select>
-                                            <option>A</option>
-                                            <option>B</option>
-                                            <option>C</option>
-                                            <option>D</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Price Per Person:
-                                    </td>
-                                    <td></td>
-                                </tr>
-
-                            </tbody>
-                        </table>
-
-
-                        <div class="row" style="padding-top: 50px; color: #fff;">
-                            <div style="background: #2b77f4; float: left; width: 40%; height: 80px;"></div>
-                            <div style="background: #2f2d2d; float: left; width: 30%; height: 80px; color: #fff;">
-                                No.of rooms
-                            <select class="form-control" style="background: #2f2d2d; border: none; text-decoration: #fff; width: 50%; color: #fff;" align="center">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                            </select>
-
-                            </div>
-                            <button class="mybtn">ADD</button>
-
-
-
-                        </div>
-
-
-                    </div>
-                </div>
-
-                <div class="gallery_product col-lg-10  filter rooms">
-
-                    <div class="col-lg-6">
-                        <img src="/assets/Images/Family%20rooms/FR1.jpg" class="img-responsive" />
-                    </div>
-                    <div class="col-lg-6" align="center">
-
-                        <br />
-                        <div class="font-robo">Double Bed room</div>
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td>View :</td>
-                                    <td>Big Window</td>
-                                </tr>
-                                <tr>
-                                    <td>Capacity :</td>
-                                    <td>2</td>
-                                </tr>
-                                <tr>
-                                    <td>Washroom :</td>
-                                    <td>Attached Washroom</td>
-                                </tr>
-                                <tr>
-                                    <td>Additional Bed:</td>
-                                    <td>No</td>
-                                </tr>
-                                <tr>
-                                    <td>Select Deck:
-                                    </td>
-                                    <td>
-                                        <select>
-                                            <option>A</option>
-                                            <option>B</option>
-                                            <option>C</option>
-                                            <option>D</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Price Per Person:
-                                    </td>
-                                    <td></td>
-                                </tr>
-
-                            </tbody>
-                        </table>
-
-
-                        <div class="row" style="padding-top: 50px; color: #fff;">
-                            <div style="background: #2b77f4; float: left; width: 40%; height: 80px;"></div>
-                            <div style="background: #2f2d2d; float: left; width: 30%; height: 80px; color: #fff;">
-                                No.of rooms
-                            <select class="form-control" style="background: #2f2d2d; border: none; text-decoration: #fff; width: 50%; color: #fff;" align="center">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                            </select>
-
-                            </div>
-                            <button class="mybtn">ADD</button>
+												</div>
+												<button class="mybtn btn1" onclick="order1()">ADD</button>
+												<!--<input type="button" class="mybtn btn1" onclick="myfun()" value="ADD" />-->
 
 
 
-                        </div>
-
-
-                    </div>
-                </div>
+										</div>
 
 
 
-                <div class="col-lg-2 side-container" id="myId">
-                    <a href="CutomerDetail.html" class="conformbtn" id="cb" onclick="validate()">Conform </a>
-                </div>
+								</div>
+						</div>
 
-            </section>
+						<script>
+								function order1()
+								{
 
-        </div>
-    </div></div>
-  </body>
-</html>
+
+										var num=sessionStorage.getItem("total");
+
+										{
+												document.querySelector('#myId').insertAdjacentHTML(
+							'afterbegin',
+							`<div class="row">
+											<div class="container">
+													 <div class="row">
+											<h4>ROOM Name 1 is Added</h4>
+											<h5>Desk: <span></span> Adult: <span></span>Room:<span></span><h2>
+											<br>
+											<h4>Prices :<span></span>&#8377;<h3>
+											</div>
+
+
+															 <input type="button" style="background:#f84848;color:white;width:200px;" value="Cancel" onclick="removeRow(this)">
+<br>
+											 </div>
+				<hr>
+
+							</div> `
+
+);
+
+										}
+										sessionStorage.setItem("rName")="room1";
+										np=np+1;
+
+								}
+
+
+								function removeRow(input) {
+										//  var f = document.getElementById('myId');
+										// f.removeChild(f.firstChild);
+										input.parentNode.remove();
+
+								}
+
+
+
+						</script>
+
+						<div class="gallery_product col-lg-12  filter FR">
+
+								<div class="col-lg-6">
+										<img src="/assets/Images/Family%20rooms/FR2.jpg" class="img-responsive" />
+								</div>
+								<div class="col-lg-6" align="center">
+
+										<br />
+										<div class="font-robo">Double Bed room</div>
+										<table>
+												<tbody>
+														<tr>
+																<td>View :</td>
+																<td>Big Window</td>
+														</tr>
+														<tr>
+																<td>Capacity :</td>
+																<td>2</td>
+														</tr>
+														<tr>
+																<td>Washroom :</td>
+																<td>Attached Washroom</td>
+														</tr>
+														<tr>
+																<td>Additional Bed:</td>
+																<td>No</td>
+														</tr>
+														<tr>
+																<td>Select Deck:
+																</td>
+																<td>
+																		<select>
+																				<option>A</option>
+																				<option>B</option>
+																				<option>C</option>
+																				<option>D</option>
+																		</select>
+																</td>
+														</tr>
+														<tr>
+																<td>Price Per Person:
+																</td>
+																<td></td>
+														</tr>
+
+												</tbody>
+										</table>
+
+
+										<div class="row" style="padding-top: 50px; color: #fff;">
+												<div style="background: #2b77f4; float: left; width: 40%; height: 80px;"></div>
+												<div style="background: #2f2d2d; float: left; width: 30%; height: 80px; color: #fff;">
+														No.of rooms
+												<select class="form-control" style="background: #2f2d2d; border: none; text-decoration: #fff; width: 50%; color: #fff;" align="center">
+														<option>1</option>
+														<option>2</option>
+														<option>3</option>
+														<option>4</option>
+												</select>
+
+												</div>
+												<button class="mybtn">ADD</button>
+
+
+
+										</div>
+
+
+								</div>
+						</div>
+
+						<div class="gallery_product col-lg-12  filter rooms">
+
+								<div class="col-lg-6">
+										<img src="/assets/Images/Family%20rooms/FR1.jpg" class="img-responsive" />
+								</div>
+								<div class="col-lg-6" align="center">
+
+										<br />
+										<div class="font-robo">Double Bed room</div>
+										<table>
+												<tbody>
+														<tr>
+																<td>View :</td>
+																<td>Big Window</td>
+														</tr>
+														<tr>
+																<td>Capacity :</td>
+																<td>2</td>
+														</tr>
+														<tr>
+																<td>Washroom :</td>
+																<td>Attached Washroom</td>
+														</tr>
+														<tr>
+																<td>Additional Bed:</td>
+																<td>No</td>
+														</tr>
+														<tr>
+																<td>Select Deck:
+																</td>
+																<td>
+																		<select>
+																				<option>A</option>
+																				<option>B</option>
+																				<option>C</option>
+																				<option>D</option>
+																		</select>
+																</td>
+														</tr>
+														<tr>
+																<td>Price Per Person:
+																</td>
+																<td></td>
+														</tr>
+
+												</tbody>
+										</table>
+
+
+										<div class="row" style="padding-top: 50px; color: #fff;">
+												<div style="background: #2b77f4; float: left; width: 40%; height: 80px;"></div>
+												<div style="background: #2f2d2d; float: left; width: 30%; height: 80px; color: #fff;">
+														No.of rooms
+												<select class="form-control" style="background: #2f2d2d; border: none; text-decoration: #fff; width: 50%; color: #fff;" align="center">
+														<option>1</option>
+														<option>2</option>
+														<option>3</option>
+														<option>4</option>
+												</select>
+
+												</div>
+												<button class="mybtn">ADD</button>
+
+
+
+										</div>
+
+
+								</div>
+						</div>
+</div>
+
+							</section>
+
+							</div>
+	</div>
+
+
+ <div class="row up-offset-1"  style="background:#e2dfdf;margin-top:150px;" >
+
+		 <div class="container">
+								<ul class="panel-body col-lg-6">
+										<li>We have rooms with capacities 1/2/4
+										</li>
+
+										<li>Please select rooms carefully based on your requirement</li>
+										<li>While selecting a room, select the right deck
+										</li>
+
+										<li>Then choose the number of rooms and click on "Add" button</li>
+								</ul>
+								<div class="col-lg-6" id="myId">
+								<a href="/users/customer-details" class="conformbtn btn" id="cb" onclick="validate()">Conform </a>
+										</div>
+						</div>
+
+</div>
+
+<% include divs/topScrollBtn %>
+<% include divs/footer %>
+
+
+
+</body>

@@ -22,7 +22,31 @@
     <link href="/assets/css/style.css" rel="stylesheet" />
     </head>
     <link href="/assets/css/navbar.css" rel="stylesheet" />
+    <script type="text/javascript">
+        function validate() {
+            var src = document.getElementById('src');
 
+            var dest = document.getElementById('dest');
+            var cdate = document.getElementById('Cdate');
+            var adults = document.getElementById('adult');
+            var childs = document.getElementById('child');
+            var infants = document.getElementById('infant');
+            var total = parseInt(adults.value) + parseInt(childs.value);
+            sessionStorage.setItem("totalNum", total);
+           var temp= sessionStorage.setItem("source", src.value);
+
+            sessionStorage.setItem("destination", dest.value);
+
+            sessionStorage.setItem("currentDate", cdate.value);
+            sessionStorage.setItem("Adults", adults.value);
+            sessionStorage.setItem("Childs",childs.value);
+            sessionStorage.setItem("Infants", infants.value);
+
+
+    
+        }
+    </script>
+</head>
 
 <div id="booking" class="section" style="background-image:url(/assets/Images/background.jpg)">
   <div class="section-center">
@@ -110,7 +134,7 @@
               </div>
               <div class="form-btn">
                 <!--<button class="submit-btn" onclick="validate()" >Proceed to Book</button>-->
-                                  <a href="BookingDetails.html" class="submit-btn" onclick="validate()">Proceed to Book</a>
+                                  <a href="/users/booking-details" class="submit-btn" onclick="validate()">Proceed to Book</a>
               </div>
             </form>
           </div>
