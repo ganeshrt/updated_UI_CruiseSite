@@ -2,6 +2,6 @@
   
 2) type following cmd
  
-	docker pull ganeshrt/CruiseBookingUI
+	docker pull ganeshrt/updated_UI_CruiseSite
 
  
