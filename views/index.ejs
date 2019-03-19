@@ -2,313 +2,32 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>HOME | Cruise Booking</title>
-    <link rel="icon" href="/assets/Images/cicon3.jpg" type="image/gif" sizes="16x16">
+    <link rel="icon" href="/assets/assets/images/cicon3.jpg" type="image/gif" sizes="16x16">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link href="/assets/css/font_style.css" rel="stylesheet" />
-    <link href="/assets/css/footer.css" rel="stylesheet" />
-    <link href="/assets/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="/assets/css/font-awesome.css" rel="stylesheet" />
+           <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/animate.css">
+    
+    <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="/assets/css/aos.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/ionicons.min.css">
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="/assets/css/main.css" rel="stylesheet" />
-     <link href="/assets/css/bootstrap.css" rel="stylesheet" />
-    <script href="/assets/JS/Custom.js" ></script>
-    <link href="/assets/css/all.css" rel="stylesheet" />
-    <link href="/assets/css/all.min.css" rel="stylesheet" />
-    <script src="/assets/JS/Custom.js"></script>
-    <link href="/assets/css/style.css" rel="stylesheet" />
-    <link href="/assets/css/navbar.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/assets/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="/assets/css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="/assets/css/flaticon.css">
+    <link rel="stylesheet" href="/assets/css/icomoon.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
 
 
-    <style>
-
-
-         .cover {
-             background: linear-gradient(to right,rgba(0,0,0,0) ,rgba(0,0,0,0.7)), url(/assets/Images/344294.jpg) center;
-             background-size: cover;
-             min-height: 50rem;
-             height: 750px;
-             border-radius: 0;
-             width: 100%;
-             color: #fff;
-             padding-top: 1rem;
-             /*background:linear-gradient(to right, rgba(40, 115, 216, 0),rgba(40, 115, 216, 0.84)),url(/assets/Images/344294.jpg) center;*/
-         }
-
-         .fa-credit-card:before {
-             content: "\f09d";
-         }
-
-         .cover h1 {
-             font-weight: 200;
-         }
-
-         .cover p.lead {
-             margin: 2rem auto;
-             color: rgba(255, 255, 255, 0.75);
-         }
-
-         .cover .cover-container {
-             display: table;
-             height: 100%;
-             min-height: 44rem;
-             margin: 0 auto;
-         }
-
-         .atag:hover {
-             border: double 1px;
-             border-radius: 4px;
-             color: #777;
-         }
-
-         .atag {
-             font-size: 20px;
-             text-align: center;
-             color: black;
-             padding-left: 3px;
-         }
-
-         .trans {
-             /*background: rgba(51, 52, 55, 0.86);*/
-             background:#e1dddd;
-             color:rgb(39, 50, 56);
-             border:thick black;
-             border-color:black;
-         }
-
-
-         .collapsible {
-             background-color: #777;
-             color: white;
-             cursor: pointer;
-             padding: 18px;
-             width: 100%;
-             border: none;
-             text-align: left;
-             outline: none;
-             font-size: 15px;
-         }
-
-          #myBtn {
-   display: none;
-   position: fixed;
-   bottom: 20px;
-   right: 30px;
-   z-index: 99;
-   border: none;
-   outline: none;
-   background-color:rgba(16, 62, 243,0.5);
-   color: white;
-   cursor: pointer;
-   padding: 15px;
-   border-radius: 10px;
-  /* box-shadow: 5px 10px 10px 5px #625f5f;*/
- }
-
- #myBtn:hover {
-   background-color:#555;
- }
-
-             .active, .collapsible:hover {
-                 background-color: #555;
-             }
-
-         .content {
-             padding: 0 18px;
-             max-height: 0;
-             overflow: hidden;
-             transition: max-height 0.2s ease-out;
-             background-color: #f1f1f1;
-         }
-
-         .footer {
-             background: rgb(39, 50, 56);
-         }
-
-         .mybtn {
-             background: #3085b8;
-             color: white;
-         }
-
-             .mybtn:hover {
-                 background: #0f5a9e;
-                 color: white;
-             }
-
-             .bgimg
-         {
-             background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("/assets/Images/247937.jpg");
-
-             margin-top: 100px;
-            height:400px;
-     background-repeat:no-repeat;
-     background-size:cover;
-
-             /*box-shadow: 5px 15px 15px 10px rgba(72, 191, 251,0.8);*/
-         }
-
-
-
-         .navbar.solid {
-             background-color: #490D40;
-             transition: background-color 1s ease 0s;
-             box-shadow: 0 0 4px grey;
-             color: #C57ED3;
-             transition: color 1s ease 0s;
-         }
-
-         .navbar-inverse {
-             color: #C57ED3;
-             transition: color 1s ease 0s;
-         }
-
-         .mynav {
-             background: white
-             /*rgba(113, 111, 111, 0.54);*/
-             ;
-             border: none;
-             box-shadow: #fff 10px 10px inset;
-             height: 80px;
-             position: fixed;
-             width: 100%;
-             opacity: 1;
-             z-index: 1;
-             top: 0;
-             left: 0;
-         }
-         body {
-   font-family: 'Montserrat', sans-serif;
-   font-weight: 400;
-
-   background:#f3f2f2;
-   font-size: 14px;
-   line-height: 1.7;
-   color: #595959;
-   background: #fff; }
-
-         .mybox {
-             border-radius: 150px; text-align: center; height: 300px; background: #eeeeee; box-shadow: 0px 0px 60px 10px rgba(0,0,0,0.3);
-         }
-
-
-            #sec {
-
-             position:relative;
-             width:100%;
-             height:100vh;
-             background-attachment:fixed;
-
-         }
-            h2 {
-
-             text-transform:uppercase;
-             letter-spacing:1px;
-         }
-            p {
-
-             text-align:justify;letter-spacing:2px;
-         }
-
-
-            #loading {
-                position:fixed;
-                /*width:100%;*/
-                height:100vh;
-                background:#fff url(/assets/Images/Preloader_3.gif) no-repeat center;
-                z-index:99999;
-            }
-
-
-            #topBtn {
-   display: none;
-   position: fixed;
-   bottom: 20px;
-   right: 30px;
-   z-index: 99;
-   font-size: 18px;
-   border: none;
-   outline: none;
-   background-color:#555;
-   color: white;
-   cursor: pointer;
-   padding: 15px;
-   border-radius: 20px;
- }
-
- #topBtn:hover {
-   background-color: #1982d8;
- }
-         .mbtn{
-            font:20px;
-            color:white;
-            letter-spacing :1px;
-            text-transform:fullwidth;
-            text-shadow:2px 2px 2px #1982d8;
-         }
-
-         .cruise-title {
-             font-size:50px;
-             letter-spacing:2px;
-             color:white;
-           text-shadow:10px 10px 10px #fff;
-         }
-     </style>
-     <script>
-
-
-         function validation() {
-
-             var src = document.getElementById('departure_result');
-
-             var dest = document.getElementById('destination_result');
-             var cdate = document.getElementById('Cdate');
-             var nPerson = document.getElementById('numP');
-             var length = document.getElementById('length');
-             var infants = document.getElementById('infant');
-             //var total = parseInt(adults.value) + parseInt(childs.value);
-             sessionStorage.setItem("total", nPerson.value);
-             var temp = sessionStorage.setItem("source", src.value);
-
-             sessionStorage.setItem("destination", dest.value);
-
-             sessionStorage.setItem("currentDate", cdate.value);
-             sessionStorage.setItem("Adults", adults.value);
-             sessionStorage.setItem("length", length.value);
-             sessionStorage.setItem("Infants", infants.value);
-
-alert("hello");
-loction.href="/users/avail-cruise";
-             loction.replace("/users/avail-cruise");
-
-             if (numP.value == "" ) {
-                 document.getElementById('err').innerHTML = " Please fill detail ";
-
-             } else {
-             }
-
-         }
-
-     </script>
-
-     <script>
-
-         function preload() {
-
-
-             var preld = document.getElementById('loading');
-             preld.style.display = 'none';
-
-
-
-
-         }
-
-     </script>
-
-     <script
-   src="https://code.jquery.com/jquery-3.3.1.js"
-   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-   crossorigin="anonymous"></script>
+   
  </head>
  <body onload="preload()"   >
 
@@ -327,437 +46,648 @@ loction.href="/users/avail-cruise";
 
         </script>
 
-     <div id="loading">
-
-     </div>
-
-     <section class="cover text-center" id="sec">
-         <div class="col-lg-12">
-
+  
       <% include divs/navbar%>
 
-         </div>
 
+ <section>
+    <div class="hero-wrap js-fullheight" style="background-image: url('/assets/images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"> </div>
+      <div class="container-fluid">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
+         
 
-         <div class="cover-container pb-4" style="padding-top: 100px;">
+            
+              
+         
+            <div class="col-lg-3" style="margin-top:5%;">
+                <div class="container search-wrap-1 ftco-animate p-4" ">
+                   <center>                 
+                              <h2 style="color:white">Find Your Route</h2>
+              <form class="horizontal cover-container" >
+                      <div class="form-group">
+                        <select id="destination_result" class="form-control trans form-field"  required>
+                          <option value="All Destination" >Any Destination</option>
+                            <option>Cochin</option>
+                            <option> Singapore</option>
+                            <option> Maldives</option>
+                            <option>Sri Lanka</option>
+                            <option> Dubai</option>
+                            <option>Kathmandu</option>
+                                    <option>Pallathurathy</option>
+                            <option>Sudarbans</option>
+                            <option>Jorhat</option>
+                            <option>Mumbai</option>
+                            <option>Bangladesh</option>
+                            <option>Goa</option>
 
+                            <option>Venice</option>
 
+                    </select>
 
-             <div class="row">
-             <div class="col-lg-3 curise_left_bar  col-lg-offset-1"">
-                 <div class="container-fluid center fontstyle" style="background: rgba(251, 249, 249, 0.79); height: 500px; width: 400px; border-radius: 20px; color: black;">
-                     <center>
-                         <h2 >Find Your Route</h2>
-               <form class="horizontal cover-container" style="padding-top:30px;">
-                       <div class="form-group">
-                         <!--<label class="frm_capital_latter">DESTINATION:</label>-->
-                         <select id="destination_result" class="form-control trans"  required>
-                           <option value="All Destination" >Any Destination</option>
-                             <option>Cochin</option>
-                             <option> Singapore</option>
-                             <option> Maldives</option>
-                             <option>Sri Lanka</option>
-                             <option> Dubai</option>
-                             <option>Kathmandu</option>
-                                     <option>Pallathurathy</option>
-                             <option>Sudarbans</option>
-                             <option>Jorhat</option>
-                             <option>Mumbai</option>
-                             <option>Bangladesh</option>
-                             <option>Goa</option>
+                         </div>
+                      <div class="form-group">
+                            <select id="departure_result" class="form-control trans"  required>
+                              <option value="All Departure"   >Any Departure Port</option>
+                                <option>Cochin</option>
+                                <option> Singapore</option>
+                                <option> Maldives</option>
+                                <option>Sri Lanka</option>
+                                <option> Dubai</option>
+                                <option>Kathmandu</option>
+                                <option>Pallathurathy</option>
+                                <option>Sudarbans</option>
+                                <option>Jorhat</option>
+                                <option>Mumbai</option>
+                                <option>Bangladesh</option>
+                                <option>Goa</option>
 
-                             <option>Venice</option>
-
-                     </select>
-
-                          </div>
-                       <div class="form-group">
-     <!--<label class="frm_capital_latter">DEPARTURE PORT:</label>-->
-                             <select id="departure_result" class="form-control trans"  required>
-                               <option value="All Departure"   >Any Departure Port</option>
-                                 <option>Cochin</option>
-                                 <option> Singapore</option>
-                                 <option> Maldives</option>
-                                 <option>Sri Lanka</option>
-                                 <option> Dubai</option>
-                                 <option>Kathmandu</option>
-                                 <option>Pallathurathy</option>
-                                 <option>Sudarbans</option>
-                                 <option>Jorhat</option>
-                                 <option>Mumbai</option>
-                                 <option>Bangladesh</option>
-                                 <option>Goa</option>
-
-                                 <option>Venice</option>
-                                 </select>
-                          </div>
-                                           <div class="form-group">
-                     <!--<label class="frm_capital_latter">DEPARTURE MONTH:</label>-->
-                         <input type="month" id="Cdate" class="form-control trans"  value="2019-03" />
-
-                   </div>
-                                       <div class="form-group">
-                          <select id="length" class="form-control trans"  required>
-                           <option value="All Length">Select Length</option>
-                           <option value="2">3-5 nights</option><option value="3">6-9 nights</option><option value="4">10-14 nights</option><option value="5">15+ nights</option>    </select>
-                       </div>
-                                       <div class="form-group">
-                     <!--<label class="frm_capital_latter">CRUISE LINE:</label>-->
-                     <select id="all_cruise" class="form-control trans" onchange="get_view_data(this.value, 'home');" required>
-                       <option value="All Cruise Lines">All Cruise Lines</option>
-                         <option>Costa Cruises </option>
-                         <option>Royal Caribbean</option>
-                         <option>Avalon Waterways</option>
-                         <option>Oberio M.V.Vrinda</option>
-                         <option>M.V.Paramhamsa</option>
-                         <option>MV Mahabaahu</option>
-                         </select>
+                                <option>Venice</option>
+                                </select>
+                         </div>
+                                          <div class="form-group">
+                        <input type="month" id="Cdate" class="form-control trans"  value="2019-03" />
+      
+                  </div>
+                                      <div class="form-group">
+                         <select id="length" class="form-control trans"  required>
+                          <option value="All Length">Select Length</option>
+                          <option value="2">3-5 nights</option><option value="3">6-9 nights</option><option value="4">10-14 nights</option><option value="5">15+ nights</option>    </select>
                       </div>
-
-                                   <div class="form-group">
-
-                       <input type="number" id="numP" class="form-control trans"  placeholder="Number of person"  required />
-
-                   </div>
-                   			<span style="background:red;color:white;" id="err"></span>
-                   <div class="form-group text-center">
-                
-                       <a href="/users/avail-cruise"   class=" btn mybtn" onclick="validation()">SEARCH CRUISES</a>
-                   </div>
-         </form>
- </center>
-
-                 </div>
-             </div>
-
-
-                 <div class="col-lg-6">
-                        <div class="cover-inner col-lg-offset-3 container">
-                            <div class="col-lg-6">
-
-             <div class="img-circle"  >
-                 <img src="/assets/Images/cicon3.jpg" class="img-circle" style="height:200px;width:auto"/>
-
-             </div>
-
-                 <h1 class="cruise-title"><strong>Cruise Booking </strong></h1>
-                            <h1 class="cruise-title"><strong>And Services  </strong></h1>
-            <h3 style="color:white;"> - Save money & Save time</h3>
-
-             </div>
-
-                 </div>
-          </div>
-
-                    <!--<a style="scrollbar-arrow-color:ActiveBorder;font-size:20px;"> <i class="fa-arrow-down   aria-hidden="true"></i></a>-->
-
-
-
-
-
-
-
-         </div>
-
-     </section>
-
-
-
-
-
-
-     <div class="container-fluid panel-heading">
-
-         <div class="col-lg-6"> </div>
-
-
-     </div>
-
-     <!-- Start popular-destination Area -->
- 			<section class="popular-destination-area section-gap" style="padding-top:10%;font-family: "Poppins", Arial, sans-serif">
- 				<div class="container">
- 		            <div class="row">
- 		                <div class="col-lg-12">
- 		                    <div class="title text-center " align="center">
- 		                        <h2 class="mb-10 ">Popular Destinations</h2>
- 		                        <p>We all live in an age that belongs to the young at heart. Life that is becoming extremely fast, day.</p>
- 		                    </div>
- 		                </div>
- 		            </div>
- 					<div class="row">
- 						<div class="col-lg-4">
-                             <div class="container">
-                                <img class="img-thumbnail" src="/assets/Images/d2.jpg" alt="">
-
-                                 <div class="">
-                                     <h4>Sri Lanka 2000&#8377;</h4>
-                                    <button class="btn myblue"  >Book</button>
-                                 </div>
-                             </div>
- </div>
- 						<div class="col-lg-4">
-                                                        <div class="container">
-                                <img class="img-thumbnail" src="/assets/Images/d1.jpg" alt="">
-
-                                 <div class="">
-                                     <h4>Sri Lanka 2000&#8377;</h4>
-                                    <button class="btn myblue"  >Book</button>
-                                 </div>
-
- 						</div>
-                             </div>
-
- 						<div class="col-lg-4">
-
-                                                        <div class="container">
-                                <img class="img-thumbnail" src="/assets/Images/d1.jpg" alt="">
-
-                                 <div class="">
-                                     <h4>Sri Lanka 2000&#8377;</h4>
-                                    <button class="btn myblue"  >Book</button>
-                                 </div>
-
-                             			</div>
- 					</div>
-
- 				</div>
- 			</section>
- 			<!-- End popular-destination Area -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-     <section style="margin-top:20%;">
-           <div class="title text-center fontstyle">
- 		                        <h2 class="mb-10" >Our Best</h2>
-                                </div>
-         <br />
-
-         <div class="row" style=" background:#70a1ff;color:white;font:32px/1.5em "ubuntubold",Arial,sans-serif">
-
-             <div class="container">
-
-                 <div class="col-lg-4">
-                     <h3> <strong > Top Cruise line</strong></h3>
-                     <br />
-                     <ul>
-                         <li class="mbtn">
-                             <span class="fa fa-arrow-right"></span> <a href="#"> Costa Cruises</a>
-                         </li>
-                         <li class="mbtn">
-
-                             <span class="fa fa-arrow-right"></span><a href="#">Royal Caribbean</a>
-
-                         </li>
-                         <li class="mbtn">
-                             <span class="fa fa-arrow-right"></span><a href="#">Avalon Waterways</a>
-
-
-                         </li>
-                         <li class="mbtn">
-                             <span class="fa fa-arrow-right"></span><a href="#">M.V.Paramhamsa</a>
-
-
-                         </li>
-                         <li class="mbtn">
-                             <span class="fa fa-arrow-right"></span><a href="#">Oberioi M.V. Vrinda</a>
-
-                         </li>
-
-
-                         <li class="mbtn">
-                             <span class="fa fa-arrow-right"></span><a href="#">MV mahabaahu</a>
-
-                         </li>
-
-                     </ul>
-
-                 </div>
-
-                 <div class="col-lg-4">
-                     <h3> <strong> Cruise Destinations </strong></h3>
-                      <br />
-                     <ul>
-                         <li class="mbtn">
-                             <span class="fa fa-arrow-right"></span> <a href="#"> Cochin</a>
-                         </li>
-                         <li class="mbtn">
-
-                             <span class="fa fa-arrow-right"></span><a href="#">Maldives</a>
-
-                         </li>
-                         <li class="mbtn">
-                             <span class="fa fa-arrow-right"></span><a href="#">Sri Lanka</a>
-
-
-                         </li>
-                         <li class="mbtn">
-                             <span class="fa fa-arrow-right"></span><a href="#">Singapore</a>
-
-
-                         </li>
-                         <li class="mbtn">
-                             <span class="fa fa-arrow-right"></span><a href="#">Dubai</a>
-
-                         </li>
-
-                         <li class="mbtn">
-                             <span class="fa fa-arrow-right"></span><a href="#">Kathmandu</a>
-
-                         </li>
-
-                         <li class="mbtn">
-                             <span class="fa fa-arrow-right"></span><a href="#">Pallathurathy</a>
-
-                         </li>
-                    <li class="mbtn">
-                             <span class="fa fa-arrow-right"></span><a href="#">Bateswarshat</a>
-
-                         </li>
-
-
-                         <li class="mbtn">
-                             <span class="fa fa-arrow-right"></span><a href="#">Bangladesh</a>
-
-                         </li>
-
-                     </ul>
-
-
-                 </div>
-
-                 <div class="col-lg-4">
-                     <h3><strong> Cruise Tips </strong></h3>
-                     <br />
-                          <ul >
-                         <li class="mbtn">
-                             <span class="fa fa-arrow-right"></span> <a href="#"> Transfer Your Booking</a>
-                         </li>
-                         <li class="mbtn">
-
-                             <span class="fa fa-arrow-right"></span><a href="#">Wedding and Honeymoon Cruise</a>
-
-                         </li>
-                         <li class="mbtn">
-                             <span class="fa fa-arrow-right"></span><a href="#">Group Cruise</a>
-
-
-                         </li>
-                         <li class="mbtn">
-                             <span class="fa fa-arrow-right"></span><a href="#">Lowest price Cruise</a>
-
-
-                         </li>
-                         <li class="mbtn">
-                             <span class="fa fa-arrow-right"></span><a href="#">Luxury Cruise</a>
-
-                         </li>
-                     </ul>
-
-
-
-                 </div>
-
-             </div>
-         </div>
-     </section>
-
-
-
-
-
-
-
-     <div >
-         <div class="row" style="text-align: center; margin-top: 50px;">
-             <!--<div class="col-md-6">
-                 <h2 style="color: #e4e0e0; font-size: 50px; margin-top: 100px; height: ;">ON SALE</h2>
-                 <br />
-                 <div class="row">
-                     <div class="col-md-2 col-lg-offset-5 text-center" align="center">
-                         <center><a href="#" class="btn myblue" style="padding-top:10px;display:block;"> Register</a></center>
+                                      <div class="form-group">
+                    <select id="all_cruise" class="form-control trans" onchange="get_view_data(this.value, 'home');" required>
+                      <option value="All Cruise Lines">All Cruise Lines</option>
+                        <option>Costa Cruises </option>
+                        <option>Royal Caribbean</option>
+                        <option>Avalon Waterways</option>
+                        <option>Oberio M.V.Vrinda</option>
+                        <option>M.V.Paramhamsa</option>
+                        <option>MV Mahabaahu</option>
+                        </select>
                      </div>
+
+                                  <div class="form-group">
+
+                      <input type="number" id="numP" class="form-control trans" min="1" placeholder="Number of person"  required />
+                                    
+                  </div>
+                            <span style="background:red;color:white;" id="err"></span>
+              <div class="col-lg align-self-end">
+                                <div class="form-group">
+                                    <div class="form-field">
+                                <a href="/users/avail-cruise" onclick="validation()" class="form-control btn btn-primary">Search </a>
+                                        <!--<button onclick="validation()"></button>-->
+                                        
+                                        <script >
+    function validation() {
+        alert("hhhh" + sessionStorage.getItem('total'));
+
+        var src = document.getElementById('departure_result');
+
+        var dest = document.getElementById('destination_result');
+        var cdate = document.getElementById('Cdate');
+        var nPerson = document.getElementById('numP');
+        var length = document.getElementById('length');
+        var infants = document.getElementById('infant');
+        sessionStorage.setItem("total", nPerson.value);
+        var temp = sessionStorage.setItem("source", src.value);
+        
+        sessionStorage.setItem("destination", dest.value);
+
+        sessionStorage.setItem("currentDate", cdate.value);
+        sessionStorage.setItem("Adults", adults.value);
+        sessionStorage.setItem("length", length.value);
+        sessionStorage.setItem("Infants", infants.value);
+
+     
+    }
+                                        </script>
+
+                              </div>
+                          </div>
+                            </div>
+        </form>    
+
+</center>
+
+                </div>
+            </div>
+     
+
+                
+
+          <div class="col-md-6 ftco-animate mt-5 offset-1 justify-content-end" data-scrollax=" properties: { translateY: '70%' }" >
+            <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Be a Traveler not a Tourist</h1>
+            <p class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Travel to the any corner of the world, without going around in circles</p>
+          </div>
+        </div>
+      </div>
+    </div>
+      </section>
+   
+
+
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center pb-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+            <h2 class="mb-4">Best Place to Travel</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+          </div>
+        </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-3 ftco-animate">
+                    <div class="project">
+                        <div class="img">
+                            <img src="/assets/images/destination-1.jpg" class="img-fluid" alt="Colorlib Template">
+                        </div>
+                        <div class="text">
+                            <h4 class="price">$400</h4>
+                            <span>15 Days Tour</span>
+                            <h3><a href="project.html">Gurtnellen, Swetzerland</a></h3>
+                            <div class="star d-flex clearfix">
+                                <div class="mr-auto float-left">
+                                    <span class="ion-ios-star"></span>
+                                    <span class="ion-ios-star"></span>
+                                    <span class="ion-ios-star"></span>
+                                    <span class="ion-ios-star"></span>
+                                    <span class="ion-ios-star"></span>
+                                </div>
+                                <div class="float-right">
+                                    <span class="rate"><a href="#">(120)</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/assets/images/destination-1.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                            <span class="icon-expand"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 ftco-animate">
+                    <div class="project">
+                        <div class="img">
+                            <img src="/assets/images/destination-2.jpg" class="img-fluid" alt="Colorlib Template">
+                        </div>
+                        <div class="text">
+                            <h4 class="price">$400</h4>
+                            <span>15 Days Tour</span>
+                            <h3><a href="project.html">Gurtnellen, Swetzerland</a></h3>
+                            <div class="star d-flex clearfix">
+                                <div class="mr-auto float-left">
+                                    <span class="ion-ios-star"></span>
+                                    <span class="ion-ios-star"></span>
+                                    <span class="ion-ios-star"></span>
+                                    <span class="ion-ios-star"></span>
+                                    <span class="ion-ios-star"></span>
+                                </div>
+                                <div class="float-right">
+                                    <span class="rate"><a href="#">(120)</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/assets/images/destination-2.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                            <span class="icon-expand"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 ftco-animate">
+                    <div class="project">
+                        <div class="img">
+                            <img src="/assets/images/destination-3.jpg" class="img-fluid" alt="Colorlib Template">
+                        </div>
+                        <div class="text">
+                            <h4 class="price">$400</h4>
+                            <span>15 Days Tour</span>
+                            <h3><a href="project.html">Gurtnellen, Swetzerland</a></h3>
+                            <div class="star d-flex clearfix">
+                                <div class="mr-auto float-left">
+                                    <span class="ion-ios-star"></span>
+                                    <span class="ion-ios-star"></span>
+                                    <span class="ion-ios-star"></span>
+                                    <span class="ion-ios-star"></span>
+                                    <span class="ion-ios-star"></span>
+                                </div>
+                                <div class="float-right">
+                                    <span class="rate"><a href="#">(120)</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/assets/images/destination-3.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                            <span class="icon-expand"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 ftco-animate">
+                    <div class="project">
+                        <div class="img">
+                            <img src="/assets/images/destination-4.jpg" class="img-fluid" alt="Colorlib Template">
+                        </div>
+                        <div class="text">
+                            <h4 class="price">$400</h4>
+                            <span>15 Days Tour</span>
+                            <h3><a href="project.html">Gurtnellen, Swetzerland</a></h3>
+                            <div class="star d-flex clearfix">
+                                <div class="mr-auto float-left">
+                                    <span class="ion-ios-star"></span>
+                                    <span class="ion-ios-star"></span>
+                                    <span class="ion-ios-star"></span>
+                                    <span class="ion-ios-star"></span>
+                                    <span class="ion-ios-star"></span>
+                                </div>
+                                <div class="float-right">
+                                    <span class="rate"><a href="#">(120)</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/assets/images/destination-4.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                            <span class="icon-expand"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section services-section bg-light">
+      <div class="container">
+        <div class="row d-flex">
+          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services d-block">
+              <div class="icon"><i class="fas  fa-3x fa-tools"></i></div>
+              <br />
+              <div class="media-body">
+                  <h3 class="heading mb-3">24/7 Service</h3>
+                <p>You only need to pay a deposit when you book your trip in advance!</p>
+    
+               </div>
+            </div>      
+          </div>
+          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services d-block">
+              <div class="icon"><i class="fas fa-3x fa-piggy-bank"></i>
+                            </div>
+                            <br />
+              <div class="media-body">
+                  <h3 class="heading mb-3">No Booking Fees</h3>
+            <p>You only need to pay a deposit when you book your trip in advance!</p>
                  </div>
-
-             </div>-->
-             <div class="col-lg-12 up-offset-1">
-                 <div class="sketchfab-embed-wrapper">
-                     <iframe width="1500" height="500" src="https://sketchfab.com/models/25044269340548d2bc776e4abdfc82cf/embed?autospin=0.2&amp;autostart=1&amp;preload=1" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+            </div>    
+          </div>
+          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services d-block">
+              <div class="icon">  <i class="fas fa-3x fa-lock"></i></div>
+              <br />
+              <div class="media-body">
+                  <h3 class="heading mb-3">Best Price Gurantee</h3>
+                            <p> We’re giving you the lowest rate possible – and we guarantee it!</p>
                  </div>
+            </div>      
+          </div>
+          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services d-block">
+              <div class="icon"> <i class="far fa-3x fa-money-bill-alt"></i></div>
+              <br />
+              <div class="media-body">
+              <h3 class="heading mb-3"> Flexible Payment</h3>
+                <p>You only need to pay a deposit when you book your trip in advance!</p>
+                </div>
+            </div>      
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="ftco-counter img" id="section-counter">
+        <div class="container">
+            <div class="row d-flex">
+                <div class="col-md-6 d-flex">
+                         <iframe width="1500" height="600" src="https://sketchfab.com/models/25044269340548d2bc776e4abdfc82cf/embed?autospin=0.2&amp;autostart=1&amp;preload=1" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+               
+                    <!--<div class="img d-flex align-self-stretch" style="background-image:url(assets/images/about.jpg);"></div>-->
+                </div>
+                <div class="col-md-6 pl-md-5 py-5">
+                    <div class="row justify-content-start pb-3">
+                  <div class="col-md-12 heading-section ftco-animate">
+                    <h2 class="mb-4">About Cruise Booking</h2>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                  </div>
+                </div>
+                    <div class="row">
+                  <div class="col-md-6 justify-content-center counter-wrap ftco-animate">
+                    <div class="block-18 text-center py-5 bg-light mb-4">
+                      <div class="text">
+                        <strong class="number" data-number="30">0</strong>
+                        <span>Amazing Deals</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 justify-content-center counter-wrap ftco-animate">
+                    <div class="block-18 text-center py-5 bg-light mb-4">
+                      <div class="text">
+                        <strong class="number" data-number="200">0</strong>
+                        <span>Sold Tours</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 justify-content-center counter-wrap ftco-animate">
+                    <div class="block-18 text-center py-5 bg-light mb-4">
+                      <div class="text">
+                        <strong class="number" data-number="2500">0</strong>
+                        <span>New Tours</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 justify-content-center counter-wrap ftco-animate">
+                    <div class="block-18 text-center py-5 bg-light mb-4">
+                      <div class="text">
+                        <strong class="number" data-number="40">0</strong>
+                        <span>Happy Customers</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
 
-             </div>
 
-         </div>
-     </div>
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center pb-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+            <h2 class="mb-4">Hotel &amp; Restaurant</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+          </div>
+        </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 ftco-animate">
+                    <div class="project">
+                        <div class="img">
+                            <img src="/assets/images/hotels/hotel1.jpeg" class="img-fluid" alt="Colorlib Template">
+                        </div>
+                        <div class="text">
+                            <h4 class="price">$600</h4>
+                            <span>300 per person</span>
+                            <h3><a href="project.html">New Orleans Hotel</a></h3>
+                            <div class="star d-flex clearfix">
+                                <div class="mr-auto float-left">
+                                    <span class="ion-ios-star"></span>
+                                    <span class="ion-ios-star"></span>
+                                    <span class="ion-ios-star"></span>
+                                    <span class="ion-ios-star"></span>
+                                    <span class="ion-ios-star"></span>
+                                </div>
+                                <div class="float-right">
+                                    <span class="rate"><a href="#">(120)</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/assets/images/hotels/hotel1.jpeg" class="icon image-popup d-flex justify-content-center align-items-center">
+                            <span class="icon-expand"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 ftco-animate">
+                    <div class="project">
+                        <div class="img">
+                            <img src="/assets/images/hotels/hotel3.jpg" class="img-fluid" alt="Colorlib Template">
+                        </div>
+                        <div class="text">
+                            <h4 class="price">$600</h4>
+                            <span>300 per person</span>
+                            <h3><a href="project.html">New Orleans Hotel</a></h3>
+                            <div class="star d-flex clearfix">
+                                <div class="mr-auto float-left">
+                                    <span class="ion-ios-star"></span>
+                                    <span class="ion-ios-star"></span>
+                                    <span class="ion-ios-star"></span>
+                                    <span class="ion-ios-star"></span>
+                                    <span class="ion-ios-star"></span>
+                                </div>
+                                <div class="float-right">
+                                    <span class="rate"><a href="#">(120)</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/assets/images/hotels/hotel3.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                            <span class="icon-expand"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 ftco-animate">
+                    <div class="project">
+                        <div class="img">
+                            <img src="/assets/images/hotels/hotel2.jpg" class="img-fluid" alt="Colorlib Template">
+                        </div>
+                        <div class="text">
+                            <h4 class="price">$600</h4>
+                            <span>300 per person</span>
+                            <h3><a href="project.html">New Orleans Restaurant</a></h3>
+                            <div class="star d-flex clearfix">
+                                <div class="mr-auto float-left">
+                                    <span class="ion-ios-star"></span>
+                                    <span class="ion-ios-star"></span>
+                                    <span class="ion-ios-star"></span>
+                                    <span class="ion-ios-star"></span>
+                                    <span class="ion-ios-star"></span>
+                                </div>
+                                <div class="float-right">
+                                    <span class="rate"><a href="#">(120)</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/assets/images/hotels/hotel2.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+                            <span class="icon-expand"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-counter img" id="section-counter">
+        <div class="container">
+            <div class="row d-flex">
+                    <div class="col-md-6 pr-md-5 py-5">
+                    <div class="row justify-content-start pb-3">
+                  <div class="col-md-12 heading-section ftco-animate">
+                    <h2 class="mb-4">Top Cruise line</h2>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+
+               <ul>
+                        <li class="ftco-animate tips">
+                            Costa Cruises
+                        </li>
+                        <li class="ftco-animate tips">
+
+                            Royal Caribbean
+
+                        </li>
+                        <li class="ftco-animate tips">
+                            Avalon Waterways
+
+
+                        </li>
+                        <li class="ftco-animate tips">
+                            M.V.Paramhamsa
+
+
+                        </li>
+                        <li class="ftco-animate tips">
+                            Oberioi M.V. Vrinda
+
+                        </li>
+
+
+                        <li class="ftco-animate tips">
+                            MV mahabaahu
+
+                        </li>
+                   
+                    </ul>
+
+                    </div>
+                </div>
+            </div>
 
 
 
+                <div class="col-md-6 pr-md-5 py-5">
+                    <div class="row justify-content-start pb-3">
+                  <div class="col-md-12 heading-section ftco-animate">
+                    <h2 class="mb-4">Cruise Destinations</h2>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+
+                                <ul>
+                        <li class="ftco-animate tips">
+                              Cochin
+                        </li>
+                        <li class="ftco-animate tips">
+
+                            Maldives
+
+                        </li>
+                        <li class="ftco-animate tips">
+                            Sri Lanka
 
 
+                        </li>
+                        <li class="ftco-animate tips">
+                            Singapore
 
 
+                        </li>
+                        <li class="ftco-animate tips">
+                            Dubai
 
+                        </li>
 
+                        <li class="ftco-animate tips">
+                            Kathmandu
 
+                        </li>
+                   
+                        <li class="ftco-animate tips">
+                            Pallathurathy
 
-     <div id="colorlib-services">
- 			<div class="container">
-                     <div class="container-fluid" style="text-align: center; padding-top: 50px;font-size:40px;font-family:'Montserrat', sans-serif;">
+                        </li>
+                   <li class="ftco-animate tips">
+                            Bateswarshat
 
-             <h2 class="font-poppins">Why Book With Us?</h2>
-                         <hr style="width:0%;color:#1982d8"/>
-         </div>
+                        </li>
+                   
 
- 				<div class="row">
- 					<div class="col-md-3 animate-box text-center">
- 						<div class="services">
- 							<span class="icon" style="color:#1982d8">
-                                 <i class="fas fa-5x fa-handshake"></i>
- 							</span>
- 							<h3>24/7 Service</h3>
- 							<p>You only need to pay a deposit when you book your trip in advance!</p>
- 						</div>
- 					</div>
- 					<div class="col-md-3 animate-box text-center">
- 						<div class="services">
- 							<span class="icon" style="color:#1982d8">
-                                    <i class="fas fa-5x fa-piggy-bank"></i>
+                        <li class="ftco-animate tips">
+                            Bangladesh
 
- 									</span>
- 							<h3>No Booking Fees</h3>
- 							<p>You only need to pay a deposit when you book your trip in advance!</p>
- 						</div>
- 					</div>
- 					<div class="col-md-3 animate-box text-center">
- 						<div class="services">
- 							<span class="icon" style="color:#1982d8">
-                                 <i class="fas fa-5x fa-lock"></i>
- 							</span>
- 							<h3>Best Price Gurantee</h3>
- 							<p> We’re giving you the lowest rate possible – and we guarantee it!</p>
- 						</div>
- 					</div>
- 					<div class="col-md-3 animate-box text-center">
- 						<div class="services" >
- 							<span class="icon" style="color:#1982d8">
-                                 <i class="far fa-5x fa-money-bill-alt"></i>
- 							</span>
- 							<h3> Flexible Payment</h3>
- 							<p>You only need to pay a deposit when you book your trip in advance!</p>
- 						</div>
- 					</div>
- 				</div>
- 			</div>
- 		</div>
+                        </li>
+                   
+                    </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+        
+
+    <section class="ftco-section ftco-no-pb testimony-section" style="background-image: url(/assets/images/bg_1.jpg);">
+        <div class="overlay"></div>
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+            <h2 class="mb-4">Happy Traveler Says</h2>
+          </div>
+        </div>
+        <div class="row ftco-animate">
+          <div class="col-md-12 testimonial">
+            <div class="carousel-testimony owl-carousel ftco-owl">
+              <div class="item">
+                <div class="testimony-wrap img" style="background-image: url(/assets/images/traveler-1.jpg);">
+                    <div class="overlay"></div>
+                  <div class="text">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Roger Scott</p>
+                    <span class="position">Marketing Manager</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap" style="background-image: url(/assets/images/traveler-2.jpg);">
+                    <div class="overlay"></div>
+                  <div class="text">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Roger Scott</p>
+                    <span class="position">Interface Designer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap" style="background-image: url(/assets/images/traveler-3.jpg);">
+                    <div class="overlay"></div>
+                  <div class="text">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Roger Scott</p>
+                    <span class="position">UI Designer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap" style="background-image: url(/assets/images/traveler-4.jpg);">
+                    <div class="overlay"></div>
+                  <div class="text">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Roger Scott</p>
+                    <span class="position">Web Developer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap" style="background-image: url(/assets/images/traveler-5.jpg);">
+                    <div class="overlay"></div>
+                  <div class="text">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Roger Scott</p>
+                    <span class="position">System Analyst</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
 
 <% include divs/topScrollBtn %>
@@ -767,6 +697,27 @@ loction.href="/users/avail-cruise";
 
 
     <!--footer area-->
+
+
+
+
+  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="/assets/js/popper.min.js"></script>
+  <script src="/assets/js/bootstrap.min.js"></script>
+  <script src="/assets/js/jquery.easing.1.3.js"></script>
+  <script src="/assets/js/jquery.waypoints.min.js"></script>
+  <script src="/assets/js/jquery.stellar.min.js"></script>
+  <script src="/assets/js/owl.carousel.min.js"></script>
+  <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+  <script src="/assets/js/aos.js"></script>
+  <script src="/assets/js/jquery.animateNumber.min.js"></script>
+  <script src="/assets/js/bootstrap-datepicker.js"></script>
+  <script src="/assets/js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="/assets/js/google-map.js"></script>
+  <script src="/assets/js/main.js"></script>
+    
 
 
 

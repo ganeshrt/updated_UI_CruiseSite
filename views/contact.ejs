@@ -1,70 +1,13 @@
 <head>
     <title>Contact | Cruise Booking</title>
-    <link rel="icon" href="/assets/Images/cicon3.jpg" type="image/gif" sizes="16x16">
-
+    <link rel="icon" href="/assets//assets/images/cicon3.jpg" type="image/gif" sizes="16x16">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  
      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link href="/assets/css/font_style.css" rel="stylesheet" />
-   <link href="/assets/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="/assets/css/font-awesome.css" rel="stylesheet" />
-    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="/assets/css/main.css" rel="stylesheet" />
-     <link href="/assets/css/bootstrap.css" rel="stylesheet" />
-   <link href="/assets/css/all.css" rel="stylesheet" />
-    <script src="/assets/JS/Custom.js"></script>
-    <script src="/assets/JS/modernizr-2.6.2.min.js"></script>
-    <link href="/assets/css/all.min.css" rel="stylesheet" />
-    <script src="/assets/JS/toggle.js"></script>
-    <link href="/assets/css/style.css" rel="stylesheet" />
+  
+<% include divs/head %>
 
-
-    <style>
-
-         #loading {
-               position:fixed;
-               width:100%;
-               height:100vh;
-               background:#fff url(/assets/images/Preloader_3.gif) no-repeat center;
-               z-index:99999;
-           }
-         .cover {
-            background: linear-gradient(rgba(0,0,0,0.5) 50%,rgba(0,0,0,0.5)), url(/assets/Images/Contactus-banner.jpg) center;
-            background-size: cover;
-            min-height: 50rem;
-            height: 500px;
-            border-radius: 0;
-            width: 100%;
-            color: #fff;
-            padding-top: 1rem;
-
-        }
-
-
-.alert {
-  padding: 20px;
-  background-color: #f44336;
-  color: white;
-  display:none;
-}
-
-.closebtn {
-  margin-left: 15px;
-  color: white;
-  font-weight: bold;
-  float: right;
-  font-size: 22px;
-  line-height: 20px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.closebtn:hover {
-  color: black;
-}
-
-.alert.success {background-color: #4CAF50;}
-
-    </style>
-    <script>
+     <script>
         function preload() {
 
 
@@ -101,98 +44,105 @@
 
     </div>
 
-    <section class="cover">
+    
 
 <% include divs/navbar %>
 
-  </section>
 
 
-    <div align="center" class="up-offset-1">
-      <h2>Contact <span style="color:#0094ff">  Us</span></h2>
-        <hr  style="background:#0094ff;height:3px;width:15%;font-weight:bold"/>
-    </div>
-
-
-    <div class="container up-offset-1">
-
-
-        <div class="col-lg-6">
-
-            <div class="img-circle"  >
-                <img src="/assets/Images/cicon3.jpg" class="img-circle" style="height:200px;width:auto"/>
-                <h2> Cruise Booking</h2>
-            </div>
-
-            <div style="color:black;letter-spacing:2px">
-                <h3> Contact Detail</h3>
-                <div class=" col-lg-6 ">
-                    <h4><i class="fa fa-location-arrow"></i>solapur ,india </h4>
-                    <h4><i class="fa fa-phone"></i>+91-9999878398  </h4>
-                    <h4><i class="fa fa fa-envelope"></i>info@example.com  </h4>
-                </div>
-
-            </div>
-
-
+<section class="hero-wrap hero-wrap-2 js-full1height" style="background-image: url('/assets/images/bg_2.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
+          <div class="col-md-9 ftco-animate pb-5 text-center">
+            <h1 class="mb-3 bread">Contact Information</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Blog <i class="ion-ios-arrow-forward"></i></span></p>
+          </div>
         </div>
-        	                 <div class="col-md-6">
-                        <div class="booking-form">
-                            <form>
-                                 <h2 align="center">Enquiry <span style="color:#0094ff"> Form</span></h2>
-                                    <br />
-                                <div class="form-group">
-                                    <span class="form-label">Name</span>
-                                    <input class="form-control" type="text" p placeholder="Enter a full name" id="name"  required/>
+      </div>
+    </section>
 
-                                    <span id="vname"></span>
+    <section class="ftco-section ftco-no-pb contact-section">
+      <div class="container">
+        <div class="row d-flex contact-info">
+          <div class="col-md-3 d-flex">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-map-signs"></span>
+              </div>
+              <h3 class="mb-4">Address</h3>
+              <p>198 West 21th Street, Suite 721 New York NY 10016</p>
+            </div>
+          </div>
+          <div class="col-md-3 d-flex">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-phone2"></span>
+              </div>
+              <h3 class="mb-4">Contact Number</h3>
+              <p><a href="tel://1234567920">+ 1235 2355 98</a></p>
+            </div>
+          </div>
+          <div class="col-md-3 d-flex">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-paper-plane"></span>
+              </div>
+              <h3 class="mb-4">Email Address</h3>
+              <p><a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+            </div>
+          </div>
+          <div class="col-md-3 d-flex">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-globe"></span>
+              </div>
+              <h3 class="mb-4">Website</h3>
+              <p><a href="#">yoursite.com</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+      
+    <section class="ftco-section contact-section">
+      <div class="container">
+        <div class="row block-9">
+          <div class="col-md-6 order-md-last d-flex">
+            <form action="#" class="bg-light p-5 contact-form">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Name" required>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" placeholder="Your Email" required>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Subject" required>
+              </div>
+              <div class="form-group">
+                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message" required></textarea>
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+              </div>
+            </form>
+          
+          </div>
 
-                                </div>
-                                    <div class="form-group">
-                                        <span class="form-label">Email</span>
-                                        <input class="form-control" type="email" placeholder="Enter a email" id="email" required/>
+          <div class="col-md-6 d-flex">
+            <div id="map" class="bg-white"></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                                        <span class="select-arrow" id="vemail"></span>
-
-                                    </div>
-
-
-                                	<div class="form-group">
-									<span class="form-label">Message</span>
-									<input class="form-control" type="text" placeholder="Write your query" style="height:100px;" id="msg" required/>
-
-                                      	<span class="select-arrow" id="vaddr"></span>
-
-								</div>
-                                <div class="alert" id="err">
-  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-  <strong>Please!</strong> Fill the Detail.
-</div>
-<div class="alert success" id="succes">
-  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-  <strong>Success!</strong> Message Sent Successfully.
-</div>
-
-
-
-
-
-                                <span class="panel-success" style="background:#27ae60" id="result"></span>
-
-                                <div class="form-btn" style="padding-top: 50px;">
-                                    <button class="submit-btn" onclick="validate()" style="float:right">Send </button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-
-
-    </div>
+ 
 
 
     <% include divs/topScrollBtn %>
          <!--footer area-->
     <% include divs/footer %>
+ <% include divs/lib %>
 
 
 

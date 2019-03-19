@@ -1,0 +1,166 @@
+<head>
+    <title></title>
+
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+
+
+<% include divs/head %>
+
+
+    <script>
+        function printContent() {
+            
+            var restorepage = document.body.innerHTML;
+            
+            
+            var printcontent = document.getElementById('div1').innerHTML;
+           
+            document.body.innerHTML = printcontent;
+            window.print();
+            document.body.innerHTML = restorepage;
+        }
+
+
+        function preloader()
+        {
+
+            document.getElementById('tour').innerHTML = sessionStorage.getItem("source") + " TO " + sessionStorage.getItem("destination");
+
+            document.getElementById('date').innerHTML = sessionStorage.getItem("currentDate");
+            document.getElementById('nP').innerHTML = sessionStorage.getItem("total");
+            document.getElementById('roomName').innerHTML = sessionStorage.getItem("rName");
+        }
+
+</script>
+</head>
+<body onload="preloader()" class="bg-light">
+
+
+
+<% include divs/navbar %>
+
+
+      
+    <div class="ftco-section contact-section">
+
+        <div class="row block-9">
+            
+            <div class="col-lg-6 container">
+
+                <div class="booking-form" id="div1">
+
+                    <div>
+                            <h3 class="panel-heading">Passenger 1</h3>
+                            <div class="panel" style="margin-left:80px;text-align:justify;">
+                            <div class="row">
+                                   <span>Name &nbsp :  ABC </span>
+                                    <span> &nbsp &nbsp |&nbsp Mobile :  +91-987654321</span>
+                            </div>
+                            <div class="row">
+                                   <span>Age : 21  </span>
+                                <span> &nbsp&nbsp | &nbsp&nbsp Gender : M</span>
+                            </div>
+                            </div>
+                    </div>
+
+                    <div>
+                            <h3 class="panel-heading">Passenger 2</h3>
+                            <div class="panel" style="margin-left:80px;text-align:justify">
+                            <div class="row">
+                                   <span>Name &nbsp :  ABC </span>
+                                    <span> &nbsp &nbsp |&nbsp Mobile :  +91-987654321</span>
+                            </div>
+                            <div class="row">
+                                   <span>Age : 21  </span>
+                                <span> &nbsp&nbsp | &nbsp&nbsp Gender : M</span>
+                            </div>
+                            </div>
+                    </div>
+
+
+                      <div class="">
+
+                            
+                            
+                            <div class="row"> 
+                                
+                                <div class="col-lg-5"> 
+                                    <h3>Tour Detail</h3>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>Tour :</td>
+                                            <td id="tour"> </td>
+                                        </tr>
+
+                                         <tr>
+                                            <td>Date :</td>
+                                            <td id="date"></td>
+                                        </tr>
+                                         <tr>
+                                            <td>Number of Person's:</td>
+                                            <td id="nP"></td>
+
+                                        </tr>
+                                         
+                                    </tbody>
+                                   
+                                </table>
+                                 
+                                <br />
+                                
+                                </div>
+                                <div class="v1"> </div>
+
+                                <div class="col-lg-5">
+                                    <h3>Room Detail</h3>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>Room :</td>
+                                            <td id="roomName"></td>
+                                        </tr>
+
+                                         <tr>
+                                            <td>capacity :</td>
+                                            <td id="capacity"></td>
+                                        </tr>
+                                         <tr>
+                                            <td>Price:</td>
+                                            <td id="roomPrice"></td>
+
+                                        </tr>
+                                         
+                                    </tbody>
+
+                                   </table>
+                                 
+                               </div>
+                              
+                               <h3>  <span> Grand Total: _________&#8377;</span></h3>
+                            </div>
+                            <span> </span>
+                            <span></span>
+                            </div>
+                   
+
+                    <button class="submit-btn btn" onclick="printContent()"> print</button> 
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+<% include divs/topScrollBtn %>
+<% include divs/footer %>
+
+
+<% include divs/lib %>
+
+
+</body>

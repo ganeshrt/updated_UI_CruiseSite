@@ -1,0 +1,553 @@
+
+    <!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"/>-->
+<!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>-->
+<!--<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>-->
+
+
+<head>
+	<<title>Roo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" href="/assets//assets/images/cicon3.jpg" type="image/gif" sizes="16x16">
+ 
+<% include divs/head %>
+
+<script>
+		function preload()
+		{
+
+				sessionStorage.setItem('np')=Number(0);
+				var preld = document.getElementById('loading');
+				preld.style.display = 'none';
+
+		}
+
+
+		function validate()
+		{
+				if(np< sessionStorage.getItem('total'))
+				{
+						alert("please select rooms");
+				}
+
+		}
+
+
+                    function order1()
+                    { 
+
+                        var num=sessionStorage.getItem("total");
+                        
+                        {
+                            document.querySelector('#myId').insertAdjacentHTML(
+                  'afterbegin',
+                  `<div class="row">
+                          <div class="container">
+                               <div class="row">
+                          <h4>ROOM Name 1 is Added</h4>
+                          <h5>Desk: <span></span> Adult: <span></span>Room:<span></span><h2>
+                          <br>
+                          <h4>Prices :<span></span>&#8377;<h3>
+                          </div>
+
+                
+                                   <input type="button" style="background:#f84848;color:white;width:200px;" value="Cancel" onclick="removeRow(this)">
+<br>
+                           </div>
+            <hr>
+
+                  </div> `  
+            
+  );
+  
+                        }
+                        sessionStorage.setItem("rName")="room1";
+                        np=np+1;
+
+                    }
+
+                    
+                    function removeRow(input) {
+                        //  var f = document.getElementById('myId');
+                        // f.removeChild(f.firstChild);
+                        input.parentNode.remove();
+
+                    }
+
+
+
+             
+
+</script>
+<script type="text/javascript">
+
+
+
+
+		function order()
+		{
+
+				document.querySelector('#myId').insertAdjacentHTML(
+'afterbegin',
+`<div class="row">
+			<div class="booking-cta container">
+					 <div class="row">
+			<h4>ROOM Name 1 is Added</h4>
+			<h5>Desk: <span></span> Adult: <span></span>Room:<span></span><h2>
+			<br>
+			<h4>Prices :<span></span>&#8377;<h3>
+			</div>
+
+
+							 <input type="button" style="background:#f84848" value="Cancel" onclick="removeRow(this)">
+
+			 </div>
+
+
+</div> <hr>`
+
+);
+
+
+		}
+
+
+		function removeRow(input) {
+				//  var f = document.getElementById('myId');
+				// f.removeChild(f.firstChild);
+				input.parentNode.remove();
+
+		}
+
+		var mybtn = document.getElementsByClassName('mybtn');
+		mybtn.onClick = function () {
+
+		}
+
+
+
+
+</script>
+
+<script>
+		$(document).ready(function () {
+
+				$(".filter-button").click(function () {
+						var value = $(this).attr('data-filter');
+
+						if (value == "all") {
+								//$('.filter').removeClass('hidden');
+								$('.filter').show('1000');
+						}
+						else {
+								//            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+								//            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+								$(".filter").not('.' + value).hide('3000');
+								$('.filter').filter('.' + value).show('3000');
+
+						}
+				});
+
+				if ($(".filter-button").removeClass("active")) {
+						$(this).removeClass("active");
+				}
+				$(this).addClass("active");
+
+		});
+</script>
+</head>
+
+<body onload="preload()" >
+
+
+
+<div id="loading1">
+</div>
+
+<section>
+
+<% include divs/navbar %>
+
+</section>
+
+
+
+ <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-9">
+            <div align="center" class="" style="width: 100%;margin-top:10%">
+                <button class="btn btn-link  filter-button" data-filter="all">All </button>
+                <button class="btn btn-link  filter-button" data-filter="rooms">Rooms</button>
+                <button class="btn btn-link filter-button" data-filter="FR">Family Rooms</button>
+                <button class="btn btn-link filter-button" data-filter="Luxury">Luxury Pods</button>
+                <button class="btn btn-link filter-button" data-filter="Dorms">Dorms</button>
+                      <script >
+                          $(document).ready(function () {
+
+                              $(".filter-button").click(function () {
+                                  alter("hh");
+                                  var value = $(this).attr('data-filter');
+
+                                  if (value == "all") {
+                                      //$('.filter').removeClass('hidden');
+                                      $('.filter').show('1000');
+                                  }
+                                  else {
+                                      //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+                                      //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+                                      $(".filter").not('.' + value).hide('3000');
+                                      $('.filter').filter('.' + value).show('3000');
+
+                                  }
+                              });
+
+                              if ($(".filter-button").removeClass("active")) {
+                                  $(this).removeClass("active");
+                              }
+                              $(this).addClass("active");
+
+                          });
+    </script>
+
+            </div>
+            
+
+            <section>
+
+               
+<div class="col-md-12 container" id="scrl" style="overflow-y:scroll;height:700px" >
+                    <div class="booking-form col-lg-12  filter rooms">
+                        <div class="row">
+                    <div class="col-md-5 panel-body ">
+                        <img src="/assets/images/Family%20rooms/FR3.jpg" class="img-thumbnail img-responsive" />
+                    </div>
+                    <div class="col-lg-5" align="center">
+
+                        <div class="page-header" id="rm">Double Bed room</div>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>View :</td>
+                                    <td>Big Window</td>
+                                </tr>
+                                <tr>
+                                    <td>Capacity :</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>Washroom :</td>
+                                    <td>Attached Washroom</td>
+                                </tr>
+                                <tr>
+                                    <td>Additional Bed:</td>
+                                    <td>No</td>
+                                </tr>
+                                <tr>
+                                    <td>Select Deck:
+                                    </td>
+                                    <td>
+                                        <select>
+                                            <option>A</option>
+                                            <option>B</option>
+                                            <option>C</option>
+                                            <option>D</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Price Per Person:
+                                    </td>
+                                    <td></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+
+                        <div class="row" style="background:#808080;color:white;font-size:25px">
+                            <div class="d-sm-block col-md-4">
+                                <strong>$120</strong>
+                                
+                            </div>
+                            <input type="number" min="1" class="form-control col-md-4" placeholder="No.Of Rooms" />
+                            
+                            <button class="btn btn-primary col-md-4" onclick="order1()">ADD1</button>
+                         
+
+
+        <script>
+                    function order1()
+                    { 
+
+                        var num=sessionStorage.getItem("total");
+                        
+                        {
+                            document.querySelector('#myId').insertAdjacentHTML(
+                  'afterbegin',
+                  `<div class="row">
+                          <div class="container">
+                               <div class="row">
+                          <h4>ROOM Name 1 is Added</h4>
+                          <h5>Desk: <span></span> Adult: <span></span>Room:<span></span><h2>
+                          <br>
+                          <h4>Prices :<span></span>&#8377;<h3>
+                          </div>
+
+                
+                                   <input type="button" style="background:#f84848;color:white;width:200px;" value="Cancel" onclick="removeRow(this)">
+<br>
+                           </div>
+            <hr>
+
+                  </div> `  
+            
+  );
+  
+                        }
+                        sessionStorage.setItem("rName")="room1";
+                        np=np+1;
+
+                    }
+
+                    
+                    function removeRow(input) {
+                        //  var f = document.getElementById('myId');
+                        // f.removeChild(f.firstChild);
+                        input.parentNode.remove();
+
+                    }
+
+
+
+                </script>
+
+
+                        </div>
+
+
+
+                    </div>
+                            </div>
+                </div>
+
+
+
+
+      <div class="booking-form col-lg-12  filter FR">
+                        <div class="row">
+                    <div class="col-md-5 panel-body ">
+                        <img src="/assets/images/Family%20rooms/FR2.jpg" class="img-thumbnail img-responsive" />
+                    </div>
+                    <div class="col-lg-5" align="center">
+
+                        <div class="page-header" id="Div1">Double Bed room</div>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>View :</td>
+                                    <td>Big Window</td>
+                                </tr>
+                                <tr>
+                                    <td>Capacity :</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>Washroom :</td>
+                                    <td>Attached Washroom</td>
+                                </tr>
+                                <tr>
+                                    <td>Additional Bed:</td>
+                                    <td>No</td>
+                                </tr>
+                                <tr>
+                                    <td>Select Deck:
+                                    </td>
+                                    <td>
+                                        <select>
+                                            <option>A</option>
+                                            <option>B</option>
+                                            <option>C</option>
+                                            <option>D</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Price Per Person:
+                                    </td>
+                                    <td></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+
+                        <div class="row" style="background:#808080;color:white;font-size:25px">
+                            <div class="d-sm-block col-md-4">
+                                <strong>$120</strong>
+                                
+                            </div>
+                            <input type="number" min="1" class="form-control col-md-4" placeholder="No.Of Rooms" />
+                            
+                            <button class="btn btn-primary col-md-4" onclick="order1()">ADD</button>
+                         
+
+
+                        </div>
+
+
+
+                    </div>
+                            </div>
+                </div>
+
+
+      <div class="booking-form col-lg-12  filter rooms">
+                        <div class="row">
+                    <div class="col-md-5 panel-body ">
+                        <img src="/assets/images/Family%20rooms/FR1.jpg" class="img-thumbnail img-responsive" />
+                    </div>
+                    <div class="col-lg-5" align="center">
+
+                        <div class="page-header" id="Div2">Double Bed room</div>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>View :</td>
+                                    <td>Big Window</td>
+                                </tr>
+                                <tr>
+                                    <td>Capacity :</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>Washroom :</td>
+                                    <td>Attached Washroom</td>
+                                </tr>
+                                <tr>
+                                    <td>Additional Bed:</td>
+                                    <td>No</td>
+                                </tr>
+                                <tr>
+                                    <td>Select Deck:
+                                    </td>
+                                    <td>
+                                        <select>
+                                            <option>A</option>
+                                            <option>B</option>
+                                            <option>C</option>
+                                            <option>D</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Price Per Person:
+                                    </td>
+                                    <td></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+
+                        <div class="row" style="background:#e7e5e5;color:red;font-size:25px">
+                            <div class="d-sm-block col-md-4">
+                                <strong>$120</strong>
+                                
+                            </div>
+                            <input type="number" min="1" class="form-control col-md-4" placeholder="No.Of Rooms" />
+                            
+                            <button class="btn btn-primary col-md-4" onclick="order1()">ADD</button>
+                         
+
+
+                        </div>
+
+
+
+                    </div>
+                            </div>
+                </div>
+
+
+                <script type="text/javascript">
+                    function order1()
+                    { 
+
+                        alter("hello");
+                        var num=sessionStorage.getItem("total");
+                        
+                        {
+                            document.querySelector('#myId').insertAdjacentHTML(
+                  'afterbegin',
+                  `<div class="row">
+                          <div class="container">
+                               <div class="row">
+                          <h4>ROOM Name 1 is Added</h4>
+                          <h5>Desk: <span></span> Adult: <span></span>Room:<span></span><h2>
+                          <br>
+                          <h4>Prices :<span></span>&#8377;<h3>
+                          </div>
+
+                
+                                   <input type="button" style="background:#f84848;color:white;width:200px;" value="Cancel" onclick="removeRow(this)">
+<br>
+                           </div>
+            <hr>
+
+                  </div> `  
+            
+  );
+  
+                        }
+                        sessionStorage.setItem("rName")="room1";
+                        np=np+1;
+
+                    }
+
+                    
+                    function removeRow(input) {
+                        //  var f = document.getElementById('myId');
+                        // f.removeChild(f.firstChild);
+                        input.parentNode.remove();
+
+                    }
+
+
+
+                </script>
+
+        </div>
+
+                  </section>
+            </div>
+            <section class="ftco-section contact-section col-md-3" >
+      <div class="container " style="margin-top:10%">
+        <div class="row block-3">
+            <ul class="panel-body ">
+                        <li>We have rooms with capacities 1/2/4
+                        </li>
+
+                        <li>Please select rooms carefully based on your requirement</li>
+                        <li>While selecting a room, select the right deck
+                        </li>
+
+                        <li>Then choose the number of rooms and click on "Add" button</li>
+                    </ul>
+                    <div class="col" id="myId">
+                    <a href="/users/customer-details" class="btn btn-primary" id="cb" onclick="validate()">Conform </a>
+                        </div>
+           </div>
+      </div>
+    </section>
+
+
+                  </div>
+      </div>
+
+<% include divs/topScrollBtn %>
+<% include divs/footer %>
+
+
+<% include divs/lib %>
+
+
+</body>

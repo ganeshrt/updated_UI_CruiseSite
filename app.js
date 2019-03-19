@@ -17,7 +17,7 @@ var userName = process.env.user|| 'admin';
 var password = process.env.password|| 'pass';
 var dbName = process.env.dbname|| 'reg-users';
 
-var cloudantUrl = `http://${userName}:${password}@192.168.99.100:5000`;
+var cloudantUrl = `http://${userName}:${password}@192.168.99.100:8081`;
 // Connect to Cloudant DB
 
 var nano = Cloudant({

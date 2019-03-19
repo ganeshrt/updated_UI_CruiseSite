@@ -1,57 +1,13 @@
+
+
+
 <head>
     <meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
 	<title>Available Cruises</title>
-<link href="/assets/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="/assets/css/font-awesome.css" rel="stylesheet" />
-   
-    <link href="/assets/CSS/style.css" rel="stylesheet" />
-    <script src="/assets/JS/Custom.js"></script>
-    <link href="/assets/CSS/font_style.css" rel="stylesheet" />
-	<!-- Bootstrap -->
-	<link type="/assets/text/css" rel="stylesheet" href="css/bootstrap.min.css" />
-
-	 <link href="/assets/CSS/bootstrap.css" rel="stylesheet" />
-<link href="/assets/css/all.min.css" rel="stylesheet" />
-    
-
-      <style>
-        .cruiseblock {
-            margin-bottom:30px;
-            height:auto;
-            font-family: 'Montserrat', sans-serif;
-
-        }
-
-             body {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7;
-  color: #595959;
-  background: #fff; }
-
-        tr {
-            top:5px;
-        }
-
-
-         #loading {
-               position:fixed;
-               width:100%;
-               height:100vh;
-               background:#fff url(images/Preloader_3.gif) no-repeat center;
-               z-index:99999;
-           }
-
-
-
-
-
-    </style>
+  <% include divs/head %>
     <script>
         function preload() {
 
@@ -69,203 +25,270 @@
 
     <% include divs/navbar %>
 
-     <section>
-
-
-        <div class="row" >
-
-            <div class="col-lg-2 style="position:fixed">
-                <div class="middle">
-                    <div class="menu">
-                        <li class="item" id='profile'>
-                            <a href="#profile" class="btn1"><i class="far fa-user"></i>By Destination</a>
-                            <div class="smenu">
-                                <a href="#">Sir Lanka</a>
-                                <a href="#">Goa</a>
-
-                                <a href="#">Maldives</a>
-                                <a href="#">Singapore</a>
-
-                                <a href="#">Cochin</a>
-
-                            </div>
-                        </li>
-
-                        <li class="item" id="messages">
-                            <a href="#messages" class="btn1"><i class="far fa-envelope"></i>By Cruise line</a>
-                            <div class="smenu">
-                                <a href="#"> Costa Cruises</a>
-                                <a href="#">Royal Caribbean</a>
-                                <a href="#">Avalon Waterways</a>
-                                <a href="#">M.V.Paramhamsa</a>
-<a href="#">Oberioi M.V. Vrinda</a>
-
-
-                               </div>
-                        </li>
-
-                        <li class="item" id="settings">
-                            <a href="#settings" class="btn1"><i class="fas fa-cog"></i>by Price</a>
-                            <div class="smenu">
-                                <a href="#">1K-2K</a>
-                                <a href="#">2K-4K</a>
-
-                                <a href="#">5K-more</a>
-                            </div>
-                        </li>
-
-                        <li class="item">
-                            <a class="btn1" href="#"><i class="fas fa-sign-out-alt"></i>Apply Filter</a>
-                        </li>
-                    </div>
-                </div>
-            </div>
-
-
-       <!--     <div class="col-lg-10">
-
-                <div class="container booking-form" >
-
-                    <h1>costa cruise</h1>
-                    </div>
-
-                </div>
-     -->
- <div class="container col-lg-8 col-lg-offset-1 ">
-
-        <div class="booking-form  cruiseblock panel-body">
-
-            <h3 class="page-header">Costa Cruise Line</h3>
-          <div class="row">
-             <div class="col-lg-4">
-             <img class="img-thumbnail img-reponsive" src="/assets/Images/costa_cruise.jpg" />
-            </div>
-            <div class="col-lg-4 col-lg-offset-1 panel-body">
-
-                <table>
-                    <tbody>
-                        <tr>
-                              <td>Cruise Line :</td>
-                                 <td> Costa line</td>
-                        </tr>
-
-
-                        <tr>
-                              <td>Ship Name :</td>
-                                 <td></td>
-                        </tr>
-
-
-                        <tr>
-                              <td>Sailing Name :Mumbai to Sri</td>
-                                 <td></td>
-                        </tr>
-
-
-                        <tr>
-                              <td>Depature port :</td>
-                                 <td></td>
-                        </tr>
-
-
-                        <tr>
-                              <td>Cruise Duration :</td>
-                                 <td></td>
-                        </tr>
-
-                        <tr>
-                              <td>Price:</td>
-                                 <td></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-           </div>
-
-            <div class="row ">
-            <p class="panel-body">
-                Experience life on a cruise across Alleppey's calm waters. Sit back, sip your drink and
-                 look out at the soft ripples, the tall coconut trees and the changing colours of the sky as the
-                 sun rises and sets.  </p>
-
-                <a class="btn myblue" href="/users/booking-details" style="float:right;margin-right:100px;">Select</a>
-            </div>
-
-           </div>
 
 
 
-
-      <div class="booking-form  cruiseblock panel-body">
-
-            <h3 class="page-header">Costa Cruise Line</h3>
-          <div class="row">
-             <div class="col-lg-4">
-             <img class="img-thumbnail img-reponsive" src="/assets/Images/820620.jpg" />
-            </div>
-            <div class="col-lg-4 col-lg-offset-1 panel-body">
-
-                <table>
-                    <tbody>
-                        <tr>
-                              <td>Cruise Line :</td>
-                                 <td> Costa line</td>
-                        </tr>
-
-
-                        <tr>
-                              <td>Ship Name :</td>
-                                 <td></td>
-                        </tr>
-
-
-                        <tr>
-                              <td>Sailing Name :Mumbai to Sri</td>
-                                 <td></td>
-                        </tr>
-
-
-                        <tr>
-                              <td>Depature port :</td>
-                                 <td></td>
-                        </tr>
-
-
-                        <tr>
-                              <td>Cruise Duration :</td>
-                                 <td></td>
-                        </tr>
-
-                        <tr>
-                              <td>Price:</td>
-                                 <td></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-           </div>
-
-            <div class="row ">
-            <p class="panel-body">
-                Experience life on a cruise across Alleppey's calm waters. Sit back, sip your drink and
-                 look out at the soft ripples, the tall coconut trees and the changing colours of the sky as the
-                 sun rises and sets.  </p>
-
-                <button class="btn myblue" style="float:right;margin-right:100px;">Select</button>
-            </div>
-
-           </div>
-
-           </div>
-
-    </div>
-</div>
+    <section class="hero-wrap hero-wrap-2 " style="background-image: url('/assets/images/247937.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
+          <div class="col-md-9 ftco-animate pb-5 text-center">
+            <h1 class="mb-3 bread">Available Cruises</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Cruises <i class="ion-ios-arrow-forward"></i></span></p>
+          </div>
+        </div>
+      </div>
     </section>
+    
+          <section class="ftco-section ftco-no-pb ftco-no-pt">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="search-wrap-1 ftco-animate p-4">
+              <form action="#" class="search-property-1">
+                <div class="row">
+                  <div class="col-lg align-items-end">
+                    <div class="form-group">
+                      <label for="#">Destination</label>
+                      <div class="form-field">
+                        <div class="icon"><span class="icon-directions_boat"></span></div>
+                        <!--<input type="text" class="form-control" placeholder="Hotel &amp; Restaurant">-->
+                                                              <select id="destination_result" class="form-control"  required>
+                          <option value="All Destination" >Destination</option>
+                            <option>Cochin</option>
+                            <option> Singapore</option>
+                            <option> Maldives</option>
+                            <option>Sri Lanka</option>
+                            <option> Dubai</option>
+                            <option>Kathmandu</option>
+                                    <option>Pallathurathy</option>
+                            <option>Sudarbans</option>
+                            <option>Jorhat</option>
+                            <option>Mumbai</option>
+                            <option>Bangladesh</option>
+                            <option>Goa</option>
+
+                            <option>Venice</option>
+
+                    </select>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg align-items-end">
+                    <div class="form-group">
+                      <label for="#">Depature Port</label>
+                      <div class="form-field">
+                        <div class="icon"><span class="icon-directions_boat"></span></div>
+                        <!--<input type="text" class="form-control checkin_date" placeholder="Check In Date">-->
+
+                               <select id="Depature Port" class="form-control"  required style="color:black">
+                          <option value="All Depature port" >Depature Port</option>
+                            <option>Cochin</option>
+                            <option> Singapore</option>
+                            <option> Maldives</option>
+                            <option>Sri Lanka</option>
+                            <option> Dubai</option>
+                            <option>Kathmandu</option>
+                                    <option>Pallathurathy</option>
+                            <option>Sudarbans</option>
+                            <option>Jorhat</option>
+                            <option>Mumbai</option>
+                            <option>Bangladesh</option>
+                            <option>Goa</option>
+
+                            <option>Venice</option>
+
+                    </select>
+
+                                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg align-items-end">
+                    <div class="form-group">
+                      <label for="#">Check-out date</label>
+                      <div class="form-field">
+                        <div class="icon"><span class="ion-ios-calendar"></span></div>
+                        <input type="text" class="form-control checkout_date" placeholder="Check Out Date" style="color:black">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg align-items-end">
+                    <div class="form-group">
+                      <label for="#">Num of Persons</label>
+                      <div class="form-field">
+                        <div class="select-wrap">
+                          <div class="icon"><span class="icon-people"></span></div>
+                         <input type="number" class="form-control" placeholder="Num of Persons" min="1"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg align-self-end">
+                    <div class="form-group">
+                      <div class="form-field">
+                        <input type="submit" value="Search" class="form-control btn btn-primary">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+
+
+    <section class="ftco-section bg-light">
+      <div class="container">
+        <div class="row d-flex">
+            
+
+               <div class="booking-form panel-body ftco-animate">
+
+            <h3 class="page-header heading">Costa Cruise Line</h3>
+          <div class="row">
+             <div class="col-lg-6">
+             <img class="block-20" src="/assets/images/costa_cruise.jpg" />
+            </div>
+            <div class="col-lg-4 col-lg-offset-1 panel-body">
+
+                <table>
+                    <tbody>
+                        <tr>
+                              <td>Cruise Line :</td>
+                                 <td> Costa line</td>
+                        </tr>
+
+                        
+                        <tr>
+                              <td>Ship Name :</td>
+                                 <td></td>
+                        </tr>
+
+                        
+                        <tr>
+                              <td>Sailing Name :Mumbai to Sri</td>
+                                 <td></td>
+                        </tr>
+
+                        
+                        <tr>
+                              <td>Depature port :</td>
+                                 <td></td>
+                        </tr>
+
+                        
+                        <tr>
+                              <td>Cruise Duration :</td>
+                                 <td></td>
+                        </tr>
+                        
+                        <tr>
+                              <td>Price:</td>
+                                 <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+           </div>
+                   <hr />
+            <div class="container">
+                <p>
+                Experience life on a cruise across Alleppey's calm waters. Sit back, sip your drink and
+                 look out at the soft ripples, the tall coconut trees and the changing colours of the sky as the
+                 sun rises and sets.  </p>
+
+         
+                <a class="btn btn-primary" href="/users/avail-rooms" style="float:right;margin-right:100px;">Select</a>
+            </div>
+
+           </div> 
+
+
+            
+                   <div class="booking-form panel-body ftco-animate" style="margin-top:50px">
+
+            <h3 class="page-header heading">Costa Cruise Line</h3>
+          <div class="row">
+             <div class="col-lg-6">
+             <img class="block-20" src="/assets/images/costa_cruise.jpg" />
+            </div>
+            <div class="col-lg-4 col-lg-offset-1 panel-body">
+
+                <table>
+                    <tbody>
+                        <tr>
+                              <td>Cruise Line :</td>
+                                 <td> Costa line</td>
+                        </tr>
+
+                        
+                        <tr>
+                              <td>Ship Name :</td>
+                                 <td></td>
+                        </tr>
+
+                        
+                        <tr>
+                              <td>Sailing Name :Mumbai to Sri</td>
+                                 <td></td>
+                        </tr>
+
+                        
+                        <tr>
+                              <td>Depature port :</td>
+                                 <td></td>
+                        </tr>
+
+                        
+                        <tr>
+                              <td>Cruise Duration :</td>
+                                 <td></td>
+                        </tr>
+                        
+                        <tr>
+                              <td>Price:</td>
+                                 <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+           </div>
+                   <hr />
+            <div class="container">
+                <p>
+                Experience life on a cruise across Alleppey's calm waters. Sit back, sip your drink and
+                 look out at the soft ripples, the tall coconut trees and the changing colours of the sky as the
+                 sun rises and sets.  </p>
+
+         
+                <a class="btn btn-primary" href="/users/avail-rooms" style="float:right;margin-right:100px;">Select</a>
+            </div>
+
+           </div> 
+
+
+            
+
+                </div>
+    
+          
+                <div class="col-md-4 d-flex ftco-animate">
+            
+          </div>
+        </div>
+          </div>
+    </section>
+
 
     <% include divs/topScrollBtn %>
          <!--footer area-->
     <% include divs/footer %>
 
-
+<% include divs/lib %>
 
 </body>

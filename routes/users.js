@@ -16,13 +16,15 @@ router.get('/contact', (req, res) => res.render('contact'));
 
 
 router.get('/index', (req, res) => res.render('index'));
+router.get('/final-report', (req, res) => res.render('Final_report'));
 
 router.get('/dining', (req, res) => res.render('dining'));
 
 router.get('/avail-cruise', (req, res) => res.render('AvailableCruise'));
 router.get('/customer-details', (req, res) => res.render('custumerDetail'));
+router.get('/Guest-Detail', (req, res) => res.render('GuestDetail'));
 
-router.get('/booking-details', (req, res) => res.render('BookingDetails'));
+router.get('/avail-rooms', (req, res) => res.render('AvailableRooms'));
 
 router.get('/book-cruise', (req, res) => res.render('bookCruise'));
 
